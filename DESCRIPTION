@@ -1,12 +1,13 @@
-Package: utilR
+Package: sciCentRverse
 Type: Package
 Title: Personal R Utility Functions
 Version: 0.1.0
 Authors@R: person(given = "Brendan", family = "Casey", email = "bgcasey@ualberta.ca", role = c("aut", "cre"))
-Description: A reusable toolkit of personal R utility functions to support
-    data processing, spatial workflows, modelling, and general analysis across
-    projects. Includes functions for spatial data handling, raster extraction,
-    time estimation, file loading, and data formatting.
+Description: An internal R package for prototyping,
+    testing, and refining reusable functions for data
+    processing, visualization, species distribution
+    modelling, and general analyses across Science
+    Centre projects.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
