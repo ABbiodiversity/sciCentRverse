@@ -1,9 +1,12 @@
-#' utilR: Personal R Utility Functions
+#' sciCentRverse: Personal R Utility Functions
 #'
-#' A reusable toolkit of personal R utility functions to support
-#' data processing, spatial workflows, modelling, and general analysis across
-#' projects. Includes functions for spatial data handling, raster extraction,
-#' time estimation, file loading, and data formatting.
+#' An internal R package for prototyping, testing, and
+#' refining reusable functions for data processing,
+#' visualization, species distribution modelling, and
+#' general analyses across Science Centre projects.
+#' Includes functions for spatial data handling, raster
+#' extraction, time estimation, file loading, and data
+#' formatting.
 #'
 #' @section Key Functions:
 #' - `add_alberta_flag()`: Flag points inside Alberta using `sf` and `rnaturalearth`.
@@ -17,6 +20,6 @@
 #' - `style_active_file()`: Format active file with `styler`.
 #' - `summarize_column_classes()`: Inspect data frame column classes.
 #'
-#' @aliases utilR utilR-package
+#' @aliases sciCentRverse sciCentRverse-package
 #' @keywords internal
 "_PACKAGE"
