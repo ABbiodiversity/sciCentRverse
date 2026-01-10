@@ -1,17 +1,25 @@
-# utilR
+<!--
+<img src="https://drive.google.com/uc?id=1fgYuG7jpnekZrkoL_PdVUnSiUFBFX-vI" alt="Logo" width="150" style="float: left; margin-right: 10px;">
+-->
+
+<img src="https://drive.google.com/uc?id=1szqLViKqTX5C1XF8uV7HbIst0i6Xvv7g" alt="Logo" width="300">
+
+# sciCentRverse
 
 ![In Development](https://img.shields.io/badge/Status-In%20Development-yellow) 
 ![Languages](https://img.shields.io/badge/Languages-R-blue)
 
 
-A reusable toolkit of personal R utility functions to support data processing, spatial workflows, modelling, and general analysis across projects.
+> [!IMPORTANT]
+> This package is intended for internal use within the **ABMI Science Centre** and serves as a development playground for prototyping, testing, and iterating on cross-project functions and workflows.
+> 
 
 ## Installation
 
 You can install the package directly from GitHub:
 
 ```r
-devtools::install_github("bgcasey/utilR")
+devtools::install_github("ABbiodiversity/sciCentRverse")
 ```
 
 ## Functions
@@ -51,7 +59,7 @@ The package includes the following utility functions:
 ## Usage
 
 ```r
-library(utilR)
+library(sciCentRverse)
 
 # Example: Convert strings to snake_case
 snake_case(c("Normal 1991_2020 AHM", "Normal 1991_2020 bFFP"))
