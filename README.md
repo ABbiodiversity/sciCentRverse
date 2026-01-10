@@ -8,7 +8,6 @@
 
 ![In Development](https://img.shields.io/badge/Status-In%20Development-yellow) 
 ![Lifecycle](https://img.shields.io/badge/Lifecycle-Experimental-orange)
-![Languages](https://img.shields.io/badge/Languages-R-blue)
 ![Package](https://img.shields.io/badge/Type-R%20Package-blueviolet)
 
 
