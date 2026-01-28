@@ -1,8 +1,12 @@
 Package: sciCentRverse
 Type: Package
 Title: Personal R Utility Functions
-Version: 0.1.0
-Authors@R: person(given = "Brendan", family = "Casey", email = "bgcasey@ualberta.ca", role = c("aut", "cre"))
+Version: 0.2.0
+Authors@R: c(
+    person(given = "Brendan", family = "Casey",
+           email = "bgcasey@ualberta.ca", role = c("aut", "cre")),
+    person(given = "Marcus", family = "Becker",
+           email = "mabecker@ualberta.ca", role = "aut"))
 Description: An internal R package for prototyping,
     testing, and refining reusable functions for data
     processing, visualization, species distribution

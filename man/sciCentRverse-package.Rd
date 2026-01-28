@@ -35,5 +35,10 @@ An internal R package for prototyping, testing, and refining reusable functions 
 \author{
 \strong{Maintainer}: Brendan Casey \email{bgcasey@ualberta.ca}
 
+Authors:
+\itemize{
+  \item Marcus Becker \email{mabecker@ualberta.ca}
+}
+
 }
 \keyword{internal}
