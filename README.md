@@ -59,6 +59,16 @@ The package includes the following utility functions:
 - `theme_science_map()` - Minimal theme for scientific map plots
 - `style_active_file()` - Style the active R file using styler
 
+### Camera Methods Functions
+- `cam_get_op_days()` - Get a dataframe of operational days for each camera
+- `cam_summarise_op_by_season()` - Summarise operational days by user-defined seasons
+- `cam_consolidate_tags()` - Consolidate per-image species tags into one row from a WildTrax main report
+- `cam_obtain_n_gap_class()` - Identify "N" gap boundaries where a NONE is found between animal images
+- `cam_calc_time_by_series()` - Calculate time-in-front-of-camera by series (in seconds)
+- `cam_sum_total_time()` - Summarise total time by project, location, species, and season (with op-days)
+- `cam_extract_model_lookup()` - Extract per-camera model ("hf2" / "pc900") from an image report
+- `cam_calc_density_by_loc()` - Calculate density at each location from seasonal time and EDD
+
 ## Usage
 
 ```r

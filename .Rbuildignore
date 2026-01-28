@@ -3,3 +3,5 @@
 ^\.git$
 ^\.gitignore$
 ^utils\.R$
+^data-raw$
+^images$

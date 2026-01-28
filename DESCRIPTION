@@ -22,8 +22,16 @@ Imports:
     glue,
     parallel,
     rlang,
-    tidyselect
+    tidyselect,
+    tidyr,
+    stringr,
+    lubridate,
+    tibble,
+    purrr,
+    data.table
 Suggests:
     rnaturalearthhires,
     rstudioapi,
     styler
+Depends: 
+    R (>= 3.5)
