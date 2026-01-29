@@ -11,36 +11,36 @@ cam_get_op_days(
   fov_col = "image_fov",
   oor_flag = "OOR",
   na_fov_means_inrange = TRUE,
+  trigger_col = "image_trigger_mode",
+  trigger_exclude_value = "CodeLoc Not Entered",
   span = c("data", "operational"),
   missing_as = TRUE
 )
 }
 \arguments{
-\item{df}{A data.frame/tibble of an image report (or multiple) from WildTrax.}
+\item{df}{Image report tibble/data.frame.}
 
-\item{grouping}{Character vector of columns that identify a camera (e.g.,
-\code{c("project_id","location","location_id")}). Only columns present in \code{image_report}
-are used (error if none are present).}
+\item{grouping}{Camera identity columns (only those present are used).}
 
-\item{datetime_col}{Name of the timestamp column (POSIXct or parsable string).
-Default \code{"image_date_time"}.}
+\item{datetime_col}{Timestamp column name. Default \code{"image_date_time"}.}
 
-\item{fov_col}{Name of the field-of-view flag column. Default \code{"image_fov"}, per WildTrax.}
+\item{fov_col}{Field-of-view flag column. Default \code{"image_fov"}.}
 
-\item{oor_flag}{String that indicates out-of-range in \code{fov_col}. Default \code{"OOR"}, per WildTrax.}
+\item{oor_flag}{String indicating out-of-range in \code{fov_col}. Default \code{"OOR"}.}
 
-\item{na_fov_means_inrange}{Logical; treat \code{NA} in \code{fov_col} as in-range?
-Default \code{TRUE}.}
+\item{na_fov_means_inrange}{Logical; treat \code{NA} in \code{fov_col} as in-range? Default TRUE.}
 
-\item{span}{Either \code{"data"} (full min..max per group) or \code{"operational"}
-(truncate to first..last operational day). Default \code{"data"}.}
+\item{trigger_col}{Column that indicates trigger mode. Default \code{"image_trigger_mode"}.}
 
-\item{missing_as}{Fill value for \code{operating} for days with \strong{no images} after expansion:
-one of \code{FALSE} (default), \code{TRUE}, or \code{NA}.}
+\item{trigger_exclude_value}{Value in \code{trigger_col} to exclude entirely from
+the calendar and ops logic. Default \code{"CodeLoc Not Entered"}.}
+
+\item{span}{\code{"data"} or \code{"operational"}. Default \code{"data"}.}
+
+\item{missing_as}{Fill for days with no images after expansion: one of TRUE, FALSE, or NA.}
 }
 \value{
-A tibble with grouping columns, \code{date} (\code{Date}), and \code{operating}
-(\code{logical}/\code{NA}) per day.
+Tibble of \code{grouping}, \code{date} (Date), and \code{operating} (logical/NA).
 }
 \description{
 Build a per-day calendar for each camera deployment and mark a date as
@@ -51,47 +51,16 @@ is out-of-range. By default, \code{NA} in \code{image_fov} is treated as in-rang
 \details{
 The function:
 \enumerate{
-\item Parses the image timestamp (\code{image_date_time} by default) to a \code{Date}.
-\item Flags each image as in-range if \code{image_fov != oor_flag} (or \code{NA} and
-\code{na_fov_means_inrange = TRUE}).
-\item Aggregates to one row per (group, date) with \verb{operating = any(in-range)}.
-\item Expands to a contiguous daily calendar and fills days with \strong{no images}
-using \code{missing_as}:
-\itemize{
-\item \code{FALSE}: treat as non-operational,
-\item \code{TRUE}: treat as operational (assume continuous operation),
-\item \code{NA}: unknown.
+\item \strong{Pre-filters} rows where \code{trigger_col == trigger_exclude_value} (default
+\code{"CodeLoc Not Entered"}). These rows do not contribute to operating days
+or calendar span.
+\item Parses the image timestamp to \code{Date}.
+\item Flags in-range by \code{fov_col != oor_flag} (or \code{NA} treated by \code{na_fov_means_inrange}).
+\item Aggregates to daily \verb{operating = any(in-range)}.
+\item Expands to a full daily calendar, filling missing days with \code{missing_as}.
+\item \code{span = "data"} uses min..max date of filtered images; \code{span = "operational"}
+trims to first..last TRUE \code{operating}.
 }
-\item The \code{span} argument controls the calendar width:
-\itemize{
-\item \code{span = "data"} builds from the earliest to the latest date seen for the group.
-\item \code{span = "operational"} truncates to the window from the first operational day
-to the last operational day (drop quiet tails).
-}
-}
-}
-\examples{
-\dontrun{
-# Basic usage with a WildTrax image report
-cal <- cam_get_op_days(
-  df           = image_report,
-  grouping     = c("project_id","location","location_id"),
-  datetime_col = "image_date_time",
-  fov_col      = "image_fov",
-  oor_flag     = "OOR",
-  span         = "operational",
-  missing_as   = FALSE
-)
-
-# Assume continuous operation between observed days:
-cal_true <- cam_get_op_days(
-  image_report,
-  grouping   = c("project_id","location"),
-  span       = "data",
-  missing_as = TRUE
-)
-}
-
 }
 \seealso{
 \code{\link{cam_summarise_op_by_season}}
