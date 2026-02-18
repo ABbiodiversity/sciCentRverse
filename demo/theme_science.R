@@ -1,4 +1,5 @@
 # Demo: theme_science
+# Apply the theme_science() to a simple scatter plot of mtcars data.
 
 library(ggplot2)
 library(sciCentRverse)
@@ -16,3 +17,5 @@ base_plot <- ggplot(mtcars, aes(x = wt, y = mpg)) +
 
 print(base_plot)
 print(base_plot + theme_science())
+
+# End of demo
