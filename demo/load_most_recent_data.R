@@ -1,4 +1,7 @@
 # Demo: load_most_recent_data
+# Create a temporary directory with several .RData files named with a
+# common prefix and date. Use load_most_recent_data() to load the most
+# recent file into the global environment.
 
 # Setup ----
 library(sciCentRverse)
@@ -33,3 +36,5 @@ print(demo_obj)
 if (TRUE) {
   unlink(demo_dir, recursive = TRUE, force = TRUE)
 }
+
+# End of demo
