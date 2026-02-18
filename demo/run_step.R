@@ -1,4 +1,5 @@
 # Demo: run_step
+# Run pipeline scripts with logging via run_step().
 
 # Setup ----
 library(sciCentRverse)
@@ -63,3 +64,5 @@ if (TRUE) {
   }
   unlink(demo_dir, recursive = TRUE, force = TRUE)
 }
+
+# End of demo
