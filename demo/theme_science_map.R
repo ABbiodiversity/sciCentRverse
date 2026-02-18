@@ -1,4 +1,5 @@
 # Demo: theme_science_map
+# Appy the theme_science_map() to a spatial plot of Alberta with a grid overlay.
 
 library(ggplot2)
 library(sciCentRverse)
@@ -34,3 +35,5 @@ base_plot <- ggplot() +
 
 print(base_plot)
 print(base_plot + theme_science_map())
+
+# End of demo
