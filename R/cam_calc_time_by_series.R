@@ -30,11 +30,11 @@
 #'   `image_time_ni_s`.
 #'
 #' **Time-between-photos (tbp)**
-#' * Supply `tbi_lookup` with columns `species_common_name`, `tbp` (seconds),
+#' * Supply `tbp_lookup` with columns `species_common_name`, `tbp` (seconds),
 #'   or let the function try to use an internal package object `tbi` (from
 #'   `R/sysdata.rda`). If neither is available, a warning is issued and `tbp = 6`
 #'   seconds is used as a fallback.
-#' * If `tbi_lookup` uses a different tbp column name (e.g., `time_between_photos`,
+#' * If `tbp_lookup` uses a different tbp column name (e.g., `time_between_photos`,
 #'   `tbi`, `tbp_seconds`), it is re-mapped to `tbp`.
 #'
 #' **Output**
@@ -47,40 +47,65 @@
 #'   project, location, image_id, image_date_time (POSIXct),
 #'   species_common_name, individual_count
 #' @param split_gap_secs Gap threshold to start a new series (seconds). Default 120.
-#' @param tbi_lookup Optional tibble with per-species time-between-photos `tbp` (seconds).
+#' @param tbp_lookup Optional tibble with per-species time-between-photos `tbp` (seconds).
 #'   Columns required: `species_common_name`, `tbp`. If `NULL`, the function will
 #'   try to use the internal package object `tbi` (from R/sysdata.rda). If that is
 #'   not available, it falls back to tbp = 6 seconds for all species and warns.
+#' @param n_gap_df Optional output of [cam_obtain_n_gap_class()]. When supplied,
+#'   any image flagged as an N-gap boundary (animal image immediately followed by a
+#'   NONE block before the next same-species image) forces a new series to start on
+#'   the image *after* it, regardless of the time gap. This prevents a NONE-bridged
+#'   pair from being counted as a single continuous series. Matched on
+#'   `image_id` × `species_common_name`.
 #'
 #' @return Tibble with one row per series and species:
 #'   project, location, species_common_name, series_num, n_images,
 #'   series_total_time (seconds), series_start, series_end
 #'
-#' @seealso [cam_sum_total_time()], [cam_get_op_days()], [cam_summarise_op_by_season()]
+#' @examples
+#' \dontrun{
+#' # cons_report is the output of cam_consolidate_tags()
+#' series <- cam_calc_time_by_series(
+#'   cons_report,
+#'   split_gap_secs = 120
+#' )
+#'
+#' # Optionally supply N-gap boundaries to split NONE-bridged series
+#' n_gaps <- cam_obtain_n_gap_class(cons_report)
+#' series <- cam_calc_time_by_series(
+#'   cons_report,
+#'   split_gap_secs = 120,
+#'   n_gap_df       = n_gaps
+#' )
+#' }
+#'
+#' @seealso [cam_sum_total_time()], [cam_obtain_n_gap_class()],
+#'   [cam_get_op_days()], [cam_summarise_op_by_season()]
 #' @author Marcus Becker
 #'
 #' @export
 cam_calc_time_by_series <- function(
     cons_main_report,
     split_gap_secs = 120,
-    tbi_lookup = NULL
+    tbp_lookup     = NULL,
+    n_gap_df       = NULL
 ) {
 
   # Resolve tbi lookup: prefer user-supplied, else internal `tbi`, else fallback
-  if (is.null(tbi_lookup)) {
-    tbi_lookup <- if (exists("tbi", inherits = TRUE)) {
+  if (is.null(tbp_lookup)) {
+    tbp_lookup <- if (exists("tbi", inherits = TRUE)) {
       get("tbi", inherits = TRUE)
     } else {
-      warning("No `tbi_lookup` provided and internal `tbi` not found; using tbp = 6s for all species.")
+      warning("No `tbp_lookup` provided and internal `tbi` not found; using tbp = 6s for all species.")
       tibble::tibble(species_common_name = unique(cons_main_report$species_common_name), tbp = 6)
     }
   }
   # Keep only needed cols; tolerate alternative column names `time_between_photos` -> `tbp`
-  if (!"tbp" %in% names(tbi_lookup)) {
-    alt <- intersect(c("time_between_photos", "tbi", "tbp_seconds"), names(tbi_lookup))
-    if (length(alt) == 1) tbi_lookup <- dplyr::rename(tbi_lookup, tbp = !!alt)
+  if (!"tbp" %in% names(tbp_lookup)) {
+    alt <- intersect(c("time_between_photos", "tbi", "tbp_seconds"), names(tbp_lookup))
+    if (length(alt) == 1) tbp_lookup <- dplyr::rename(tbp_lookup, tbp = !!alt)
   }
-  tbi_lookup <- tbi_lookup |>
+  tbp_lookup <- tbp_lookup |>
     dplyr::select(species_common_name, tbp) |>
     dplyr::mutate(tbp = as.numeric(tbp))
 
@@ -97,6 +122,25 @@ cam_calc_time_by_series <- function(
     stop("`image_date_time` must be POSIXct. Parse before calling.", call. = FALSE)
   }
 
+  # Resolve N-gap boundaries: flag images whose successor should start a new series
+  # regardless of the time gap (animal left FOV via a NONE-bridged gap).
+  if (!is.null(n_gap_df) && nrow(n_gap_df) > 0L) {
+    if (!all(c("image_id", "species_common_name") %in% names(n_gap_df))) {
+      warning(
+        "`n_gap_df` must contain `image_id` and `species_common_name`; ",
+        "N-gap splitting skipped.", call. = FALSE
+      )
+      d$.is_n_gap <- FALSE
+    } else {
+      n_gap_keys <- dplyr::distinct(n_gap_df, image_id, species_common_name) |>
+        dplyr::mutate(.is_n_gap = TRUE)
+      d <- dplyr::left_join(d, n_gap_keys, by = c("image_id", "species_common_name")) |>
+        dplyr::mutate(.is_n_gap = dplyr::coalesce(.is_n_gap, FALSE))
+    }
+  } else {
+    d$.is_n_gap <- FALSE
+  }
+
   # Sort & compute gaps within camera and species
   d <- d |>
     dplyr::arrange(project, location, species_common_name, image_date_time, image_id) |>
@@ -104,7 +148,14 @@ cam_calc_time_by_series <- function(
     dplyr::mutate(
       dt_prev    = dplyr::lag(image_date_time),
       gap_prev_s = as.numeric(difftime(image_date_time, dt_prev, units = "secs")),
-      new_series = dplyr::if_else(dplyr::row_number() == 1L | gap_prev_s > split_gap_secs, 1L, 0L),
+      # Start a new series if: first image, time gap exceeded, or previous image
+      # was an N-gap boundary (animal left FOV through a NONE-bridged gap).
+      new_series = dplyr::if_else(
+        dplyr::row_number() == 1L |
+          gap_prev_s > split_gap_secs |
+          dplyr::lag(.is_n_gap, default = FALSE),
+        1L, 0L
+      ),
       series_num = cumsum(new_series)
     ) |>
     dplyr::ungroup()
@@ -125,7 +176,7 @@ cam_calc_time_by_series <- function(
 
   # Attach tbp (seconds) and warn if any species missing in lookup
   d <- d |>
-    dplyr::left_join(tbi_lookup, by = "species_common_name") |>
+    dplyr::left_join(tbp_lookup, by = "species_common_name") |>
     dplyr::mutate(tbp = dplyr::coalesce(tbp, 6.0))
   missing_tbp <- d |>
     dplyr::filter(is.na(tbp)) |>

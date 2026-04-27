@@ -44,16 +44,35 @@
 #' @param series_df Output of cam_calc_time_by_series(); needs
 #'   project, location, species_common_name, series_start, series_total_time
 #' @param season_cutoffs Named integer vector of Julian cutoffs, e.g.
-#'   c(spring=99L, summer=143L, winter=288L)  (labels come from names; lower-case recommended)
-#' @param tz Time zone for interpreting series_start
-#' @param op_days_df Operating-days table for zero-fill + days per season.
-#'   Accepts EITHER:
+#'   c(spring=99L, summer=143L, winter=288L). Labels come from names (lower-case
+#'   recommended for consistency with EDD lookups). Cutoffs are auto-sorted, so
+#'   order does not matter.
+#' @param tz Time zone used to extract the Julian day from \code{series_start}.
+#'   Defaults to \code{Sys.timezone()} (the local system timezone). WildTrax
+#'   timestamps are typically stored in local time, so this default is usually
+#'   correct. Override explicitly (e.g. \code{"America/Edmonton"}) when running
+#'   on a machine whose timezone does not match the study area.
+#' @param op_days_df Operating-days table (required) for zero-fill + days per
+#'   season. Accepts EITHER:
 #'   - long: project, location, season, total_season_days (or operating_days), or
-#'   - wide: project, location, one column per season label (values are day counts)
+#'   - wide: project, location, one column per season label (values are day counts).
+#'   Typically the output of \code{cam_summarise_op_by_season(wide = TRUE)}.
 #' @param species_universe Optional vector used for zero-fill across species
 #'
 #' @return Tibble with: project, location, species_common_name, season,
 #'   total_duration, total_season_days
+#'
+#' @examples
+#' \dontrun{
+#' # series is the output of cam_calc_time_by_series()
+#' # op_days is the output of cam_summarise_op_by_season(wide = TRUE)
+#' dur <- cam_sum_total_time(
+#'   series_df        = series,
+#'   season_cutoffs   = c(spring = 99L, summer = 143L, winter = 288L),
+#'   op_days_df       = op_days,
+#'   species_universe = c("White-tailed Deer", "Moose", "Black Bear")
+#' )
+#' }
 #'
 #' @seealso [cam_calc_time_by_series()], [cam_get_op_days()], [cam_summarise_op_by_season()]
 #'
@@ -63,8 +82,8 @@
 cam_sum_total_time <- function(
     series_df,
     season_cutoffs   = c(spring=99L, summer=143L, winter=288L),
-    tz               = "UTC",
-    op_days_df       = NULL,
+    tz               = Sys.timezone(),
+    op_days_df,
     species_universe = NULL
 ) {
 
@@ -77,7 +96,6 @@ cam_sum_total_time <- function(
   cuts <- as.integer(season_cutoffs); names(cuts) <- names(season_cutoffs)
   cuts <- cuts[order(cuts)]
   labs <- names(cuts)
-  if (is.unsorted(cuts, strictly=TRUE)) stop("`season_cutoffs` must be strictly increasing.", call. = FALSE)
 
   s <- series_df
   if (!inherits(s$series_start, "POSIXt")) {
@@ -88,9 +106,7 @@ cam_sum_total_time <- function(
 
   make_season <- function(x, cuts_int, labs, tz_local) {
     j <- as.integer(strftime(x, "%j", tz = tz_local))
-    idx <- findInterval(j, cuts_int, left.open = FALSE, rightmost.closed = TRUE)
-    idx[idx == 0L] <- length(cuts_int)
-    factor(labs[idx], levels = labs, ordered = TRUE)
+    .assign_season(j, cuts_int, labs)
   }
 
   # Assign seasons & sum time
@@ -100,9 +116,6 @@ cam_sum_total_time <- function(
     dplyr::summarise(total_duration = sum(series_total_time, na.rm = TRUE), .groups = "drop")
 
   # normalise op_days_df to long: project, location, season, total_season_days
-  if (is.null(op_days_df)) {
-    stop("`op_days_df` is required here so we can carry `total_season_days` forward to density.", call. = FALSE)
-  }
   if (!all(c("project","location") %in% names(op_days_df))) {
     stop("`op_days_df` must contain `project` and `location`.", call. = FALSE)
   }

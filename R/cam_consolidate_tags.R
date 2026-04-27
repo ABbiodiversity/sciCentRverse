@@ -6,6 +6,9 @@
 #' `sex_class` by replicating each tag by that row's count and joining with
 #' `", "`. The `image_date_time` is retained and must be identical within each
 #' image. Non-species rows (e.g., `"STAFF/SETUP"`, `"NONE"`) are preserved unchanged.
+#' Rows whose `species_common_name` is neither in `native_sp` nor in the
+#' non-species list are **dropped with a warning** listing the unexpected labels
+#' and row counts.
 #'
 #' @details
 #' Species identification uses the **internal** character vector `native_sp`
@@ -35,6 +38,8 @@
 #' # If duplicate tags were removed, you'll see a warning listing image_id(s).
 #' }
 #'
+#' @seealso [cam_calc_time_by_series()] for the next step in the pipeline.
+#'
 #' @author Marcus Becker
 #'
 #' @export
@@ -50,6 +55,28 @@ cam_consolidate_tags <- function(report) {
   non_species <- c("STAFF/SETUP", "NONE")
   is_species     <- report$species_common_name %in% native_sp
   is_non_species <- report$species_common_name %in% non_species
+
+  # Warn about rows that are neither a known species nor a known non-species
+  # label. These are dropped silently otherwise (e.g. domestic animals,
+  # uncertain tags, or labels not yet in native_sp).
+  is_unknown <- !is_species & !is_non_species
+  if (any(is_unknown)) {
+    unknown_counts <- sort(table(report$species_common_name[is_unknown]),
+                           decreasing = TRUE)
+    shown <- head(unknown_counts, 10L)
+    label_str <- paste(
+      paste0('"', names(shown), '" (n=', shown, ')'),
+      collapse = ", "
+    )
+    extra <- length(unknown_counts) - length(shown)
+    warning(
+      sum(is_unknown), " row(s) with unrecognised species_common_name dropped: ",
+      label_str,
+      if (extra > 0L) paste0(" ... +", extra, " more label(s)") else "",
+      ". Add to `native_sp` or the non-species list if intentional.",
+      call. = FALSE
+    )
+  }
 
   to_int_or_na <- function(x) suppressWarnings(as.integer(x))
 

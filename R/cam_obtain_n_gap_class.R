@@ -23,6 +23,9 @@
 #'   grouping columns, `image_id`, `image_date_time`, `species_common_name`,
 #'   `gap_class = "N"`. If none are found, returns an empty tibble and warns.
 #'
+#' @seealso [cam_calc_time_by_series()] which accepts the output of this function
+#'   via its `n_gap_df` parameter to force series splits at NONE-bridged boundaries.
+#'
 #' @author Marcus Becker
 #'
 #' @export

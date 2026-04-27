@@ -102,14 +102,6 @@ cam_summarise_op_by_season <- function(
     list(starts = starts[o], labels = labs[o])
   }
 
-  .classify_season <- function(yday_vec, starts, labels) {
-    widths <- c(diff(starts), 366L - (starts[length(starts)] - starts[1L]))
-    breaks <- c(0L, cumsum(widths))
-    yrot <- ((yday_vec - starts[1L]) %% 366L) + 1L
-    idx  <- findInterval(yrot, breaks, rightmost.closed = TRUE)
-    stats::setNames(factor(labels[idx], levels = labels), NULL)
-  }
-
   # Resolve grouping cols present
   present_keys <- intersect(grouping, names(calendar_df))
 
@@ -128,7 +120,7 @@ cam_summarise_op_by_season <- function(
       .date   = as.Date(!!date_sym),
       .op     = dplyr::coalesce(as.logical(!!operating_sym), if (na_as) TRUE else FALSE),
       .yday   = lubridate::yday(.date),
-      .season = .classify_season(.yday, s_starts, s_labels),
+      .season = .assign_season(.yday, s_starts, s_labels),
       .year   = lubridate::year(.date)
     )
 

@@ -15,6 +15,8 @@ cam_calc_density_by_loc(
   dist_groups_df = NULL,
   edd_df = NULL,
   aggregate = FALSE,
+  agg_exclude_species = "Bear",
+  agg_exclude_season = "winter",
   use_global_edd = FALSE,
   annotate_edd_source = TRUE
 )
@@ -44,12 +46,21 @@ If NULL, an object named \code{dist_groups} must exist in your env/package.}
 \item{edd_df}{Optional override EDD table. If NULL, an object named \code{edd} must exist.
 Must include: dist_group, season, overall_category, edd; ideally \code{n}, and optionally \code{model}, \code{height}.}
 
-\item{aggregate}{Logical; if TRUE, return weighted mean per deployment by species
-(weights = \code{total_season_days}) after removing Bear–winter rows.}
+\item{aggregate}{Logical; if TRUE, return weighted mean per deployment × species
+(weights = \code{total_season_days}). Rows matching \code{agg_exclude_species} ×
+\code{agg_exclude_season} are removed before aggregation. See also \code{agg_exclude_species}.}
+
+\item{agg_exclude_species}{Regex pattern (case-insensitive) for species to exclude
+from aggregation in a specific season. Default \code{"Bear"}. Set to \code{NULL} to
+disable exclusion entirely.}
+
+\item{agg_exclude_season}{Season label(s) to exclude for the matching species.
+Default \code{"winter"}. Set to \code{NULL} to disable exclusion entirely.}
 
 \item{use_global_edd}{Logical; if TRUE, fill missing exact EDDs using a \strong{dist-group–specific plan}.}
 
-\item{annotate_edd_source}{Logical; add \code{edd_source} = "exact"/"pooled" (default TRUE).}
+\item{annotate_edd_source}{Logical; if TRUE (default), add \code{edd_source} column with
+values \code{"observed"}, \code{"prefilled"}, or \code{"pooled"}. See Details.}
 }
 \value{
 Seasonal densities (long/wide) or weighted aggregate (if \code{aggregate = TRUE}).
@@ -94,14 +105,28 @@ Uses weighted pooled EDDs (weights = \code{n}) following a conservative plan per
 \item \code{Coyote}, \code{Deer}, \code{LargeUngulates}: pool over \code{overall_category}
 (keys: \code{dist_group}, \code{season}, \code{model}, \code{height}; absent keys are ignored).
 \item \code{Bear}, \code{Hare}, \code{Lynx}, \code{SmallMustelids}, \code{Wolf}: try pooled-overall first, then pool over height.
-If pooling supplies an EDD and \code{annotate_edd_source = TRUE}, marks \code{edd_source = "pooled"};
-otherwise \code{edd_source = "exact"}. If pooling fails, density remains \code{NA}.
+If pooling supplies an EDD and \code{annotate_edd_source = TRUE}, marks \code{edd_source = "pooled"}.
+If pooling fails, density remains \code{NA}.
+}
+
+\strong{EDD source annotation (\code{annotate_edd_source = TRUE})}
+Adds an \code{edd_source} column with three levels:
+\itemize{
+\item \code{"observed"}: EDD came from a direct match in the lookup table with \code{n > 0}
+(real measured detections).
+\item \code{"prefilled"}: EDD came from a direct match but \code{n = 0}, meaning the value
+was pre-filled in the sysdata EDD table to cover a missing model/height
+combination within the vegetation category.
+\item \code{"pooled"}: no exact match existed; EDD was derived at runtime by
+\code{use_global_edd} pooling across vegetation categories.
 }
 
 \strong{Aggregation (\code{aggregate = TRUE})}
 \itemize{
 \item Returns one row per deployment × species with \code{weighted.mean(density_km2, w = total_season_days, na.rm = TRUE)}.
 \item Removes Bear–winter rows before aggregation (including zeros).
+\item When \code{annotate_edd_source = TRUE}, \code{edd_source} is carried through using the
+most conservative level across seasons: \code{"pooled"} > \code{"prefilled"} > \code{"observed"}.
 }
 
 \strong{Outputs}
@@ -111,6 +136,24 @@ otherwise \code{edd_source = "exact"}. If pooling fails, density remains \code{N
 \item \code{format = "wide"}: densities pivoted to one row per deployment (diagnostic season-day columns included).
 \item \code{aggregate = TRUE}: one row per deployment × species (no seasons).
 }
+}
+\examples{
+\dontrun{
+# dur is the output of cam_sum_total_time(), with model and height columns added
+density <- dur |>
+  dplyr::left_join(model_lookup, by = c("project", "location")) |>
+  dplyr::mutate(height = "high") |>
+  dplyr::filter(total_season_days >= 30) |>
+  cam_calc_density_by_loc(
+    edd_category_df     = edd_categories,
+    cam_fov_angle       = 40,
+    format              = "long",
+    aggregate           = TRUE,
+    use_global_edd      = TRUE,
+    annotate_edd_source = TRUE
+  )
+}
+
 }
 \seealso{
 \code{\link[=cam_sum_total_time]{cam_sum_total_time()}}, \code{\link[=cam_calc_time_by_series]{cam_calc_time_by_series()}}, \code{\link[=cam_summarise_op_by_season]{cam_summarise_op_by_season()}}

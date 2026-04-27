@@ -21,6 +21,9 @@ group, sum \code{individual_count} (numeric rows) and collapse \code{age_class} 
 \code{sex_class} by replicating each tag by that row's count and joining with
 \code{", "}. The \code{image_date_time} is retained and must be identical within each
 image. Non-species rows (e.g., \code{"STAFF/SETUP"}, \code{"NONE"}) are preserved unchanged.
+Rows whose \code{species_common_name} is neither in \code{native_sp} nor in the
+non-species list are \strong{dropped with a warning} listing the unexpected labels
+and row counts.
 }
 \details{
 Species identification uses the \strong{internal} character vector \code{native_sp}
@@ -40,6 +43,9 @@ x <- cam_consolidate_tags(main_reports)
 # If duplicate tags were removed, you'll see a warning listing image_id(s).
 }
 
+}
+\seealso{
+\code{\link[=cam_calc_time_by_series]{cam_calc_time_by_series()}} for the next step in the pipeline.
 }
 \author{
 Marcus Becker

@@ -7,7 +7,8 @@
 cam_calc_time_by_series(
   cons_main_report,
   split_gap_secs = 120,
-  tbi_lookup = NULL
+  tbp_lookup = NULL,
+  n_gap_df = NULL
 )
 }
 \arguments{
@@ -17,10 +18,17 @@ species_common_name, individual_count}
 
 \item{split_gap_secs}{Gap threshold to start a new series (seconds). Default 120.}
 
-\item{tbi_lookup}{Optional tibble with per-species time-between-photos \code{tbp} (seconds).
+\item{tbp_lookup}{Optional tibble with per-species time-between-photos \code{tbp} (seconds).
 Columns required: \code{species_common_name}, \code{tbp}. If \code{NULL}, the function will
 try to use the internal package object \code{tbi} (from R/sysdata.rda). If that is
 not available, it falls back to tbp = 6 seconds for all species and warns.}
+
+\item{n_gap_df}{Optional output of \code{\link[=cam_obtain_n_gap_class]{cam_obtain_n_gap_class()}}. When supplied,
+any image flagged as an N-gap boundary (animal image immediately followed by a
+NONE block before the next same-species image) forces a new series to start on
+the image \emph{after} it, regardless of the time gap. This prevents a NONE-bridged
+pair from being counted as a single continuous series. Matched on
+\code{image_id} × \code{species_common_name}.}
 }
 \value{
 Tibble with one row per series and species:
@@ -64,11 +72,11 @@ series. Bookends get zeros on the missing side.
 
 \strong{Time-between-photos (tbp)}
 \itemize{
-\item Supply \code{tbi_lookup} with columns \code{species_common_name}, \code{tbp} (seconds),
+\item Supply \code{tbp_lookup} with columns \code{species_common_name}, \code{tbp} (seconds),
 or let the function try to use an internal package object \code{tbi} (from
 \code{R/sysdata.rda}). If neither is available, a warning is issued and \code{tbp = 6}
 seconds is used as a fallback.
-\item If \code{tbi_lookup} uses a different tbp column name (e.g., \code{time_between_photos},
+\item If \code{tbp_lookup} uses a different tbp column name (e.g., \code{time_between_photos},
 \code{tbi}, \code{tbp_seconds}), it is re-mapped to \code{tbp}.
 }
 
@@ -80,8 +88,27 @@ seconds is used as a fallback.
 post-adjust downstream.
 }
 }
+\examples{
+\dontrun{
+# cons_report is the output of cam_consolidate_tags()
+series <- cam_calc_time_by_series(
+  cons_report,
+  split_gap_secs = 120
+)
+
+# Optionally supply N-gap boundaries to split NONE-bridged series
+n_gaps <- cam_obtain_n_gap_class(cons_report)
+series <- cam_calc_time_by_series(
+  cons_report,
+  split_gap_secs = 120,
+  n_gap_df       = n_gaps
+)
+}
+
+}
 \seealso{
-\code{\link[=cam_sum_total_time]{cam_sum_total_time()}}, \code{\link[=cam_get_op_days]{cam_get_op_days()}}, \code{\link[=cam_summarise_op_by_season]{cam_summarise_op_by_season()}}
+\code{\link[=cam_sum_total_time]{cam_sum_total_time()}}, \code{\link[=cam_obtain_n_gap_class]{cam_obtain_n_gap_class()}},
+\code{\link[=cam_get_op_days]{cam_get_op_days()}}, \code{\link[=cam_summarise_op_by_season]{cam_summarise_op_by_season()}}
 }
 \author{
 Marcus Becker

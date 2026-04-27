@@ -17,6 +17,18 @@
 #' @param pc900_pattern Regex used to detect PC900 models (case-insensitive).
 #'   Default "PC900|PC 900|PC-900".
 #'
+#' @examples
+#' \dontrun{
+#' # image_reports is a WildTrax image report tibble
+#' model_lookup <- cam_extract_model_lookup(
+#'   image_reports,
+#'   keys      = c("project", "location"),
+#'   model_col = "equipment_model"
+#' )
+#' }
+#'
+#' @seealso [cam_calc_density_by_loc()] which accepts this output via `model_df`.
+#'
 #' @author Marcus Becker
 #'
 #' @return Tibble with `keys` + `model` (values: "hf2" or "pc900").

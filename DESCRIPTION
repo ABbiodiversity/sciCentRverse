@@ -12,6 +12,8 @@ Description: An internal R package for prototyping,
     processing, visualization, species distribution
     modelling, and general analyses across Science
     Centre projects.
+URL: https://ABbiodiversity.github.io/sciCentRverse/, https://github.com/ABbiodiversity/sciCentRverse
+BugReports: https://github.com/ABbiodiversity/sciCentRverse/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -34,8 +36,11 @@ Imports:
     purrr,
     data.table
 Suggests:
+    knitr,
+    rmarkdown,
     rnaturalearthhires,
     rstudioapi,
     styler
 Depends: 
     R (>= 3.5)
+VignetteBuilder: knitr

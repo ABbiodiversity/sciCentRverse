@@ -7,8 +7,8 @@
 cam_sum_total_time(
   series_df,
   season_cutoffs = c(spring = 99L, summer = 143L, winter = 288L),
-  tz = "UTC",
-  op_days_df = NULL,
+  tz = Sys.timezone(),
+  op_days_df,
   species_universe = NULL
 )
 }
@@ -17,15 +17,22 @@ cam_sum_total_time(
 project, location, species_common_name, series_start, series_total_time}
 
 \item{season_cutoffs}{Named integer vector of Julian cutoffs, e.g.
-c(spring=99L, summer=143L, winter=288L)  (labels come from names; lower-case recommended)}
+c(spring=99L, summer=143L, winter=288L). Labels come from names (lower-case
+recommended for consistency with EDD lookups). Cutoffs are auto-sorted, so
+order does not matter.}
 
-\item{tz}{Time zone for interpreting series_start}
+\item{tz}{Time zone used to extract the Julian day from \code{series_start}.
+Defaults to \code{Sys.timezone()} (the local system timezone). WildTrax
+timestamps are typically stored in local time, so this default is usually
+correct. Override explicitly (e.g. \code{"America/Edmonton"}) when running
+on a machine whose timezone does not match the study area.}
 
-\item{op_days_df}{Operating-days table for zero-fill + days per season.
-Accepts EITHER:
+\item{op_days_df}{Operating-days table (required) for zero-fill + days per
+season. Accepts EITHER:
 \itemize{
 \item long: project, location, season, total_season_days (or operating_days), or
-\item wide: project, location, one column per season label (values are day counts)
+\item wide: project, location, one column per season label (values are day counts).
+Typically the output of \code{cam_summarise_op_by_season(wide = TRUE)}.
 }}
 
 \item{species_universe}{Optional vector used for zero-fill across species}
@@ -86,6 +93,19 @@ see explicit zeros rather than missing rows.
 \code{project}, \code{location}, \code{species_common_name}, \code{season},
 \code{total_duration} (seconds), and \code{total_season_days} (days).
 }
+}
+\examples{
+\dontrun{
+# series is the output of cam_calc_time_by_series()
+# op_days is the output of cam_summarise_op_by_season(wide = TRUE)
+dur <- cam_sum_total_time(
+  series_df        = series,
+  season_cutoffs   = c(spring = 99L, summer = 143L, winter = 288L),
+  op_days_df       = op_days,
+  species_universe = c("White-tailed Deer", "Moose", "Black Bear")
+)
+}
+
 }
 \seealso{
 \code{\link[=cam_calc_time_by_series]{cam_calc_time_by_series()}}, \code{\link[=cam_get_op_days]{cam_get_op_days()}}, \code{\link[=cam_summarise_op_by_season]{cam_summarise_op_by_season()}}

@@ -35,12 +35,24 @@
 #' * `Coyote`, `Deer`, `LargeUngulates`: pool over `overall_category`
 #'   (keys: `dist_group`, `season`, `model`, `height`; absent keys are ignored).
 #' * `Bear`, `Hare`, `Lynx`, `SmallMustelids`, `Wolf`: try pooled-overall first, then pool over height.
-#' If pooling supplies an EDD and `annotate_edd_source = TRUE`, marks `edd_source = "pooled"`;
-#' otherwise `edd_source = "exact"`. If pooling fails, density remains `NA`.
+#' If pooling supplies an EDD and `annotate_edd_source = TRUE`, marks `edd_source = "pooled"`.
+#' If pooling fails, density remains `NA`.
+#'
+#' **EDD source annotation (`annotate_edd_source = TRUE`)**
+#' Adds an `edd_source` column with three levels:
+#' * `"observed"`: EDD came from a direct match in the lookup table with `n > 0`
+#'   (real measured detections).
+#' * `"prefilled"`: EDD came from a direct match but `n = 0`, meaning the value
+#'   was pre-filled in the sysdata EDD table to cover a missing model/height
+#'   combination within the vegetation category.
+#' * `"pooled"`: no exact match existed; EDD was derived at runtime by
+#'   `use_global_edd` pooling across vegetation categories.
 #'
 #' **Aggregation (`aggregate = TRUE`)**
 #' * Returns one row per deployment × species with `weighted.mean(density_km2, w = total_season_days, na.rm = TRUE)`.
 #' * Removes Bear–winter rows before aggregation (including zeros).
+#' * When `annotate_edd_source = TRUE`, `edd_source` is carried through using the
+#'   most conservative level across seasons: `"pooled"` > `"prefilled"` > `"observed"`.
 #'
 #' **Outputs**
 #' * `format = "long"`: per-season rows with `overall_category`, `model`, `height`,
@@ -63,12 +75,37 @@
 #'   If NULL, an object named `dist_groups` must exist in your env/package.
 #' @param edd_df Optional override EDD table. If NULL, an object named `edd` must exist.
 #'   Must include: dist_group, season, overall_category, edd; ideally `n`, and optionally `model`, `height`.
-#' @param aggregate Logical; if TRUE, return weighted mean per deployment by species
-#'   (weights = `total_season_days`) after removing Bear–winter rows.
+#' @param aggregate Logical; if TRUE, return weighted mean per deployment × species
+#'   (weights = `total_season_days`). Rows matching `agg_exclude_species` ×
+#'   `agg_exclude_season` are removed before aggregation. See also `agg_exclude_species`.
+#' @param agg_exclude_species Regex pattern (case-insensitive) for species to exclude
+#'   from aggregation in a specific season. Default `"Bear"`. Set to `NULL` to
+#'   disable exclusion entirely.
+#' @param agg_exclude_season Season label(s) to exclude for the matching species.
+#'   Default `"winter"`. Set to `NULL` to disable exclusion entirely.
 #' @param use_global_edd Logical; if TRUE, fill missing exact EDDs using a **dist-group–specific plan**.
-#' @param annotate_edd_source Logical; add `edd_source` = "exact"/"pooled" (default TRUE).
+#' @param annotate_edd_source Logical; if TRUE (default), add `edd_source` column with
+#'   values `"observed"`, `"prefilled"`, or `"pooled"`. See Details.
 #'
 #' @return Seasonal densities (long/wide) or weighted aggregate (if `aggregate = TRUE`).
+#'
+#' @examples
+#' \dontrun{
+#' # dur is the output of cam_sum_total_time(), with model and height columns added
+#' density <- dur |>
+#'   dplyr::left_join(model_lookup, by = c("project", "location")) |>
+#'   dplyr::mutate(height = "high") |>
+#'   dplyr::filter(total_season_days >= 30) |>
+#'   cam_calc_density_by_loc(
+#'     edd_category_df     = edd_categories,
+#'     cam_fov_angle       = 40,
+#'     format              = "long",
+#'     aggregate           = TRUE,
+#'     use_global_edd      = TRUE,
+#'     annotate_edd_source = TRUE
+#'   )
+#' }
+#'
 #' @seealso [cam_sum_total_time()], [cam_calc_time_by_series()], [cam_summarise_op_by_season()]
 #' @author Marcus Becker
 #' @export
@@ -82,8 +119,10 @@ cam_calc_density_by_loc <- function(
     height_col      = "height",
     dist_groups_df  = NULL,
     edd_df          = NULL,
-    aggregate       = FALSE,
-    use_global_edd  = FALSE,
+    aggregate           = FALSE,
+    agg_exclude_species = "Bear",
+    agg_exclude_season  = "winter",
+    use_global_edd      = FALSE,
     annotate_edd_source = TRUE
 ) {
   format <- match.arg(format)
@@ -156,7 +195,14 @@ cam_calc_density_by_loc <- function(
   # ensure diagnostics
   if (!"model" %in% names(d_edd))  d_edd$model  <- NA_character_
   if (!"height" %in% names(d_edd)) d_edd$height <- NA_character_
-  if (annotate_edd_source && !"edd_source" %in% names(d_edd)) d_edd$edd_source <- NA_character_
+  if (annotate_edd_source) {
+    # Distinguish observed (n > 0), pre-filled (n == 0), and not-yet-matched (NA)
+    d_edd$edd_source <- dplyr::case_when(
+      is.na(d_edd$edd)                          ~ NA_character_,
+      !is.na(d_edd$n) & d_edd$n > 0            ~ "observed",
+      TRUE                                       ~ "prefilled"
+    )
+  }
 
   # ---- optional pooled fallback driven by dist_group ----
   if (use_global_edd) {
@@ -208,8 +254,8 @@ cam_calc_density_by_loc <- function(
     )
 
     if (annotate_edd_source) {
-      d_edd$edd_source <- ifelse(!is.na(d_edd$edd), "exact",
-                                 ifelse(!is.na(edd_final), "pooled", NA_character_))
+      # Only override rows that had no exact EDD but received a runtime-pooled value
+      d_edd$edd_source[is.na(d_edd$edd) & !is.na(edd_final)] <- "pooled"
     }
     d_edd$edd <- edd_final
     d_edd <- d_edd |>
@@ -238,15 +284,42 @@ cam_calc_density_by_loc <- function(
     dplyr::relocate(dplyr::any_of(c("edd_source")), .after = "density_km2")
 
   if (aggregate) {
-    out_agg <- out_long0 |>
-      dplyr::filter(!(grepl("Bear", species_common_name) & season == "winter")) |>
-      dplyr::group_by(project, location, species_common_name,
-                      overall_category, model, height) |>
+    agg_groups     <- c("project","location","species_common_name","overall_category","model","height")
+    no_bear_winter <- out_long0
+    if (!is.null(agg_exclude_species) && !is.null(agg_exclude_season)) {
+      no_bear_winter <- dplyr::filter(
+        no_bear_winter,
+        !(grepl(agg_exclude_species, species_common_name, ignore.case = TRUE) &
+            season %in% agg_exclude_season)
+      )
+    }
+
+    out_agg <- no_bear_winter |>
+      dplyr::group_by(dplyr::across(dplyr::all_of(agg_groups))) |>
       dplyr::summarise(
         density_km2 = stats::weighted.mean(density_km2, w = total_season_days, na.rm = TRUE),
         .groups = "drop"
       ) |>
       dplyr::arrange(project, location, species_common_name)
+
+    if (annotate_edd_source && "edd_source" %in% names(no_bear_winter)) {
+      src_agg <- no_bear_winter |>
+        dplyr::group_by(dplyr::across(dplyr::all_of(agg_groups))) |>
+        dplyr::summarise(
+          edd_source = {
+            src <- unique(edd_source[!is.na(edd_source)])
+            dplyr::case_when(
+              "pooled"    %in% src ~ "pooled",
+              "prefilled" %in% src ~ "prefilled",
+              "observed"  %in% src ~ "observed",
+              TRUE                 ~ NA_character_
+            )
+          },
+          .groups = "drop"
+        )
+      out_agg <- dplyr::left_join(out_agg, src_agg, by = agg_groups)
+    }
+
     return(out_agg)
   }
 

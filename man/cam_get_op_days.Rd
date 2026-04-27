@@ -62,6 +62,18 @@ or calendar span.
 trims to first..last TRUE \code{operating}.
 }
 }
+\examples{
+\dontrun{
+# image_reports is a WildTrax image report tibble
+cal <- cam_get_op_days(
+  image_reports,
+  grouping   = c("project_id", "project", "location_id", "location"),
+  span       = "data",
+  missing_as = TRUE
+)
+}
+
+}
 \seealso{
 \code{\link{cam_summarise_op_by_season}}
 }

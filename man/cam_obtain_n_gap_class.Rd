@@ -45,6 +45,10 @@ Flags boundaries where an animal image is followed (after one or more rows of
 split into separate series because the intervening \code{NONE} indicates the animal
 left the FOV, even if the total animal-to-animal image gap is small.
 }
+\seealso{
+\code{\link[=cam_calc_time_by_series]{cam_calc_time_by_series()}} which accepts the output of this function
+via its \code{n_gap_df} parameter to force series splits at NONE-bridged boundaries.
+}
 \author{
 Marcus Becker
 }

@@ -5,3 +5,8 @@
 ^utils\.R$
 ^data-raw$
 ^images$
+^\.positai$
+^\.claude$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

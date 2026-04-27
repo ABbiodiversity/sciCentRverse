@@ -37,6 +37,20 @@ Minimal helper to derive a per-camera \code{model} from a model column
 (defaults to \code{equipment_model}). Returns one row per camera key with
 \code{model} in lower case.
 }
+\examples{
+\dontrun{
+# image_reports is a WildTrax image report tibble
+model_lookup <- cam_extract_model_lookup(
+  image_reports,
+  keys      = c("project", "location"),
+  model_col = "equipment_model"
+)
+}
+
+}
+\seealso{
+\code{\link[=cam_calc_density_by_loc]{cam_calc_density_by_loc()}} which accepts this output via \code{model_df}.
+}
 \author{
 Marcus Becker
 }
