@@ -1,0 +1,355 @@
+# Estimating mammal density using the cam\_\*() workflow
+
+## Overview
+
+The `cam_*()` family of functions can be used to implement a
+**time-in-front-of-camera (TIFC)** pipeline for estimating wildlife
+density at individual camera locations[¹](#fn1). The method calculates
+how much total time each species spends in the camera’s field of view,
+then converts that to an area-standardised density estimate
+(individuals/km²) using the camera’s effective detection distance (EDD)
+and the number of days it was operational.
+
+These functions are designed to work with the reports (i.e., output)
+from
+[WildTrax](https://ABbiodiversity.github.io/sciCentRverse/articles/www.wildtrax.ca),
+which can be read into the user’s R environment either as a csv file or
+using the data download functions available in the
+[wildrtrax](https://abbiodiversity.github.io/wildrtrax/) R package.
+
+------------------------------------------------------------------------
+
+## Prerequisites
+
+``` r
+# Load packages
+library(wildrtrax)
+library(tidyverse)
+library(sciCentRverse)
+```
+
+The `cam_*()` functions depend on several internal lookup tables stored
+in the package’s `sysdata.rda`:
+
+| Object            | Contents                                                                 |
+|-------------------|--------------------------------------------------------------------------|
+| `native_sp`       | Character vector of recognized wildlife species names from WildTrax      |
+| `tbi`             | Per-species average time-between-images (seconds)                        |
+| `dist_groups`     | Mapping of species to EDD distance groups                                |
+| `edd`             | EDD lookup by dist_group × vegetation category × season × model × height |
+| `gap_groups`      | Grouping of time-gap classes for probabilistic gap adjustment            |
+| `leave_prob_pred` | Predicted probability of departure by gap_group and species_group        |
+
+These are loaded automatically with the package and do not need to be
+supplied by the user.
+
+------------------------------------------------------------------------
+
+## Step 1: Download data from WildTrax
+
+The functions in this workflow expect the output from WildTrax. Data can
+be downloaded using the `wildrtrax` package. The example below downloads
+the **main** and **image** reports from the ABMI’s [Biodiversity
+Trajectories 2023](https://portal.wildtrax.ca/cam/2025) project using
+the `wt_download_report()` function from wildrtrax.
+
+``` r
+# Authenticate into WildTrax
+wt_auth()
+
+# Find project of interest
+bdt_proj <- wt_get_projects(sensor = "CAM") |>
+  filter(project == "Biodiversity Trajectories 2023") |>
+  select(project, project_id)
+
+bdt_proj_id <- bdt_proj$project_id
+
+# Download reports for all projects
+ls_bdt_reports <- wt_download_report(
+  project_id = bdt_proj_id,
+  sensor_id = "CAM",
+  reports = c("main", "image_report")
+)
+```
+
+Extract and tidy image and main reports separately:
+
+``` r
+# Image report: one row per image
+df_image_report <- ls_bdt_reports |>
+  (\(x) x[str_detect(names(x), "image_report\\.csv$")])() |>
+  list_rbind() |>
+  left_join(bdt_proj, by = "project_id")
+
+# Main report: one row per image × species tag
+df_main_report <- ls_bdt_reports |>
+  (\(x) x[str_detect(names(x), "main_report\\.csv$")])() |>
+  list_rbind() |>
+  left_join(bdt_proj, by = "project_id")
+```
+
+------------------------------------------------------------------------
+
+## Step 2: Camera operating days
+
+[`cam_get_op_days()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_get_op_days.md)
+builds a per-day operational calendar for each camera from the image
+report dataframe. A day is counted as **operational** if at least one
+in-range image exists (i.e. `image_fov != "OOR"`). Images triggered by
+`"CodeLoc Not Entered"` are excluded entirely.
+
+``` r
+df_days <- df_image_report |>
+  cam_get_op_days(
+    grouping   = c("project_id", "project", "location_id", "location"),
+    missing_as = TRUE,
+    span       = "data"
+  )
+```
+
+The result is a long tibble with one row per camera per day, with an
+`operating` logical column.
+
+``` r
+head(df_days, 10)
+```
+
+### Summarising by season
+
+[`cam_summarise_op_by_season()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_summarise_op_by_season.md)
+aggregates the daily calendar built in the previous step into seasonal
+operating-day totals. Seasons are defined by **Julian day start
+cutoffs**. For example, the standard ABMI season definitions are the
+Julian days of 99, 143, and 288, which correspond to the beginning of
+the spring, summer, and winter periods for downstream EDD calculations.
+
+``` r
+# Standard ABMI season definitions
+seasons <- c(spring = 99L,   # ~April 9
+             summer = 143L,  # ~May 23
+             winter = 288L)  # ~October 15
+
+df_days_summary <- df_days |>
+  cam_summarise_op_by_season(
+    seasons  = seasons,
+    by_year  = FALSE,
+    wide     = TRUE   # one column per season + total_days
+  )
+```
+
+The wide output has one row per camera location with columns `spring`,
+`summer`, `winter`, and `total_days`, which are all counts of
+operational days.
+
+``` r
+head(df_days_summary, 10)
+```
+
+------------------------------------------------------------------------
+
+## Step 3: Consolidate species tags
+
+WildTrax stores tags at the **image × individual tag** level: if two
+deer are visible in one image and have different tag categories (e.g.,
+one adult and one juvenile), there will be two rows in the main report.
+[`cam_consolidate_tags()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_consolidate_tags.md)
+collapses these into one row per **image × species**, summing counts and
+concatenating age/sex classes, which is what is needed for downstream
+calculations.
+
+``` r
+df_main_report_cons <- cam_consolidate_tags(df_main_report)
+```
+
+The function also detects and warns about likely duplicate tag entries
+(identical rows except `tag_id`) and drops unknown `species_common_name`
+labels with a warning — both indicate upstream data quality issues worth
+investigating.
+
+------------------------------------------------------------------------
+
+## Step 4: Time in front of camera
+
+### Parse into series
+
+[`cam_calc_time_by_series()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_calc_time_by_series.md)
+groups consecutive images of the same species at the same camera into
+**series** using a time-gap threshold. Images more than `split_gap_secs`
+seconds apart (default 120 s) start a new series. Each series is then
+assigned a duration using the time-in-front-of-camera (TIFC) method,
+with several adjustments to account for probabilities that the animal
+left the camera field of view:
+
+- **NONE-bridged gaps**:
+  [`cam_obtain_n_gap_class()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_obtain_n_gap_class.md)
+  is called internally to detect cases where an animal briefly leaves
+  the field of view — and a `NONE` image was triggered — and returns
+  within the gap threshold. Without this check, such a pair would be
+  collapsed into a single series and over-estimate time spent. Any
+  detected boundary forces a new series regardless of the time gap.
+- **Probabilistic gap adjustment**: within-series gaps of 20–120 s fall
+  in an ambiguous zone — too short to confidently split into a new
+  series, but long enough that the animal may have temporarily left the
+  field of view. By default (`adjust_gap_prob = TRUE`), a
+  species-group-specific probability of departure is applied to both
+  sides of these gaps, reducing the time credited across them
+  proportionally. Set `adjust_gap_prob = FALSE` to disable this and
+  compare results under both assumptions.
+
+``` r
+df_series <- cam_calc_time_by_series(df_main_report_cons)
+```
+
+The output is one row per series with columns `project`, `location`,
+`species_common_name`, `series_num`, `n_images`, `series_total_time`
+(seconds), `series_start`, and `series_end`.
+
+``` r
+head(df_series, 10)
+```
+
+### Sum to seasonal totals
+
+[`cam_sum_total_time()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_sum_total_time.md)
+rolls up series-level times to seasonal totals per camera × species,
+zero-filling locations with no detections for any species in
+the`species_universe` argument.
+
+``` r
+sp_uni <- c("White-tailed Deer", "Black Bear", "Moose",
+            "Woodland Caribou", "Fisher", "Marten",
+            "Coyote", "Snowshoe Hare", "Canada Lynx")
+
+df_dur <- df_series |>
+  cam_sum_total_time(
+    season_cutoffs   = seasons,
+    op_days_df       = df_days_summary,
+    species_universe = sp_uni
+  )
+```
+
+The output has one row per camera × species × season with
+`total_duration` (seconds of TIFC) and `total_season_days` (operational
+days in that season).
+
+``` r
+head(df_dur, 10)
+```
+
+------------------------------------------------------------------------
+
+## Step 5: Calculate density
+
+### Camera model lookup
+
+EDD values vary by camera model.
+[`cam_extract_model_lookup()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_extract_model_lookup.md)
+derives a `model` label (`"hf2"` or `"pc900"`) for each camera from the
+`equipment_model`field in the image report.
+
+``` r
+df_model <- df_image_report |>
+  cam_extract_model_lookup(
+    keys      = c("project", "project_id", "location", "location_id"),
+    model_col = "equipment_model"
+  )
+```
+
+### Density calculation
+
+[`cam_calc_density_by_loc()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_calc_density_by_loc.md)
+joins EDD values from the internal lookup table to each camera × species
+× season row and applies the TIFC density formula. EDD lookups are keyed
+on species distance group, vegetation category (`overall_category`),
+season, camera model, and mounting height. Users can adjust the camera
+angle height, the format of the output (long or wide), and choose
+whether or not to aggregate the density value at each location across
+the seasons sampling. The output dataframe reports density at each
+location as the number of individuals per km².
+
+Note that users must supply their own lookup table for each location’s
+EDD vegetation category (i.e., `edd_category_df`), as well as indicate
+the height of the camera.
+
+``` r
+df_density <- df_dur |>
+  left_join(df_model, by = c("project", "location")) |>
+  mutate(height = "high") |>              # 1 m mounting height
+  cam_calc_density_by_loc(
+    edd_category_df     = df_bdt_edd,     # vegetation category per location
+    cam_fov_angle       = 40,             # degrees
+    format              = "long",
+    aggregate           = TRUE,           # weighted mean across seasons
+    use_global_edd      = TRUE,           # fall back to pooled EDD if needed
+    annotate_edd_source = TRUE            # label EDD provenance
+  )
+
+head(df_density, 10)
+```
+
+#### Seasonal exclusions
+
+By default, Black Bear detections in winter are excluded from the
+seasonal weighted mean before aggregating (bears are hibernating and
+zero detections do not reflect low density). This is controlled by
+`agg_exclude_species` and `agg_exclude_season`:
+
+``` r
+# Default: exclude Bear × winter
+cam_calc_density_by_loc(
+  ...,
+  agg_exclude_species = "Bear",
+  agg_exclude_season  = "winter"
+)
+
+# To include all seasons:
+cam_calc_density_by_loc(
+  ...,
+  agg_exclude_species = NULL
+)
+```
+
+------------------------------------------------------------------------
+
+## Full pipeline at a glance
+
+``` r
+# 1. Operating days
+df_days <- df_image_reports |>
+  cam_get_op_days(grouping = c("project_id", "project", "location_id", "location"),
+                  span = "data", missing_as = TRUE)
+
+df_days_summary <- df_days |>
+  cam_summarise_op_by_season(seasons = c(spring = 99L, summer = 143L, winter = 288L),
+                             wide = TRUE)
+
+# 2. Consolidate tags
+df_main_reports_cons <- cam_consolidate_tags(df_main_reports)
+
+# 3. Time in front of camera
+df_series <- df_main_reports_cons |>
+  cam_calc_time_by_series(split_gap_secs = 120)
+
+df_dur <- df_series |>
+  cam_sum_total_time(season_cutoffs   = c(spring = 99L, summer = 143L, winter = 288L),
+                     op_days_df       = df_days_summary,
+                     species_universe = sp_uni)
+
+# 4. Density
+df_model <- df_image_reports |>
+  cam_extract_model_lookup(keys = c("project", "location"))
+
+df_density <- df_dur |>
+  left_join(df_model, by = c("project", "location")) |>
+  mutate(height = "high") |>
+  cam_calc_density_by_loc(edd_category_df     = df_bdt_edd,
+                          cam_fov_angle       = 40,
+                          aggregate           = TRUE,
+                          use_global_edd      = TRUE,
+                          annotate_edd_source = TRUE)
+```
+
+------------------------------------------------------------------------
+
+1.  The TIFC method is described in [Becker et
+    al. 2022](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4005)
