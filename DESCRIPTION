@@ -1,6 +1,6 @@
 Package: sciCentRverse
 Type: Package
-Title: Personal R Utility Functions
+Title: sciCentRverse
 Version: 0.2.0
 Authors@R: c(
     person(given = "Brendan", family = "Casey",
