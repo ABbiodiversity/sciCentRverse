@@ -19,6 +19,10 @@
 #'   `image_date_time` (then `image_id`) and the previous-gap (seconds) is computed.
 #' * A new series starts at the first image or when the gap exceeds `split_gap_secs`
 #'   (default 120 s). `series_num` is the cumulative count of such starts.
+#' * [cam_obtain_n_gap_class()] is called internally to detect NONE-bridged gaps —
+#'   cases where an animal image is separated from the next same-species image by one
+#'   or more `NONE` rows. These boundaries also force a new series regardless of the
+#'   time gap, preventing a NONE-bridged pair from inflating a single series duration.
 #'
 #' **Per-image time allocation**
 #' * For each image, `diff_prev_s` is the elapsed time since the previous image in
@@ -28,6 +32,31 @@
 #' * Bookend image time: `((diff_prev_s + diff_next_s)/2) + (tbp/2)`.
 #' * Image time is multiplied by `individual_count` (coerced numeric) to obtain
 #'   `image_time_ni_s`.
+#' * Note: a single-image series receives `tbp/2` (not `tbp`) unless you choose to
+#'   post-adjust downstream.
+#'
+#' **Probabilistic gap adjustment** (`adjust_gap_prob = TRUE`)
+#'
+#' Within-series gaps of 20–120 s fall in an ambiguous zone: the gap is too short
+#' to confidently split into a new series, but long enough that the animal may
+#' have temporarily left the camera's field of view (FOV). To account for this,
+#' a species-group-specific probability of FOV departure (`pred`) is looked up from
+#' the internal `leave_prob_pred` table (derived from empirical gap-length models)
+#' and applied to both sides of the gap:
+#'
+#' \deqn{diff\_prev\_adj = diff\_prev \times (1 - pred)}
+#' \deqn{diff\_next\_adj = diff\_next \times (1 - pred)}
+#'
+#' This reduces the time credited across the gap proportionally to how likely it
+#' is the animal was absent. A gap of exactly 20 s receives only a small reduction;
+#' a gap near 120 s receives a much larger one.
+#'
+#' Species are assigned to gap groups via the internal `gap_groups` lookup. Any
+#' species not present in that lookup (e.g., uncommonly detected taxa) receives
+#' no adjustment — their within-series gaps are treated as though the animal was
+#' continuously present. If this concerns you for a given analysis, set
+#' `adjust_gap_prob = FALSE` to disable the adjustment entirely and inspect
+#' results under both assumptions.
 #'
 #' **Time-between-photos (tbp)**
 #' * Supply `tbp_lookup` with columns `species_common_name`, `tbp` (seconds),
@@ -37,13 +66,7 @@
 #' * If `tbp_lookup` uses a different tbp column name (e.g., `time_between_photos`,
 #'   `tbi`, `tbp_seconds`), it is re-mapped to `tbp`.
 #'
-#' **Output**
-#' * One row per `project × location × species_common_name × series_num`, with:
-#'   `n_images`, `series_total_time` (seconds), `series_start`, and `series_end`.
-#' * Note: a single-image series receives `tbp/2` (not `tbp`) unless you choose to
-#'   post-adjust downstream.
-#'
-#' @param cons_main_report Data frame (after cam_consolidate_tags()) with at least:
+#' @param cons_main_report Data frame (after [cam_consolidate_tags()]) with at least:
 #'   project, location, image_id, image_date_time (POSIXct),
 #'   species_common_name, individual_count
 #' @param split_gap_secs Gap threshold to start a new series (seconds). Default 120.
@@ -51,12 +74,12 @@
 #'   Columns required: `species_common_name`, `tbp`. If `NULL`, the function will
 #'   try to use the internal package object `tbi` (from R/sysdata.rda). If that is
 #'   not available, it falls back to tbp = 6 seconds for all species and warns.
-#' @param n_gap_df Optional output of [cam_obtain_n_gap_class()]. When supplied,
-#'   any image flagged as an N-gap boundary (animal image immediately followed by a
-#'   NONE block before the next same-species image) forces a new series to start on
-#'   the image *after* it, regardless of the time gap. This prevents a NONE-bridged
-#'   pair from being counted as a single continuous series. Matched on
-#'   `image_id` × `species_common_name`.
+#' @param adjust_gap_prob Logical. If `TRUE` (default), applies a species-specific
+#'   probability-of-leaving-FOV correction to within-series gaps of 20–120 s, using
+#'   the internal `gap_groups` and `leave_prob_pred` lookup tables. Set to `FALSE`
+#'   to skip the adjustment and treat all within-series gaps as fully occupied — for
+#'   example, to compare results under both assumptions or when working primarily
+#'   with species not covered by the gap-group lookup.
 #'
 #' @return Tibble with one row per series and species:
 #'   project, location, species_common_name, series_num, n_images,
@@ -65,18 +88,12 @@
 #' @examples
 #' \dontrun{
 #' # cons_report is the output of cam_consolidate_tags()
-#' series <- cam_calc_time_by_series(
-#'   cons_report,
-#'   split_gap_secs = 120
-#' )
 #'
-#' # Optionally supply N-gap boundaries to split NONE-bridged series
-#' n_gaps <- cam_obtain_n_gap_class(cons_report)
-#' series <- cam_calc_time_by_series(
-#'   cons_report,
-#'   split_gap_secs = 120,
-#'   n_gap_df       = n_gaps
-#' )
+#' # Standard usage — N-gap detection and probabilistic gap adjustment applied automatically
+#' series <- cam_calc_time_by_series(cons_report)
+#'
+#' # Disable probabilistic adjustment to compare results under both assumptions
+#' series_unadj <- cam_calc_time_by_series(cons_report, adjust_gap_prob = FALSE)
 #' }
 #'
 #' @seealso [cam_sum_total_time()], [cam_obtain_n_gap_class()],
@@ -86,9 +103,9 @@
 #' @export
 cam_calc_time_by_series <- function(
     cons_main_report,
-    split_gap_secs = 120,
-    tbp_lookup     = NULL,
-    n_gap_df       = NULL
+    split_gap_secs  = 120,
+    tbp_lookup      = NULL,
+    adjust_gap_prob = TRUE
 ) {
 
   # Resolve tbi lookup: prefer user-supplied, else internal `tbi`, else fallback
@@ -109,6 +126,10 @@ cam_calc_time_by_series <- function(
     dplyr::select(species_common_name, tbp) |>
     dplyr::mutate(tbp = as.numeric(tbp))
 
+  # Resolve leave-probability lookups from internal data
+  gap_groups_lkp      <- get("gap_groups",      envir = asNamespace("sciCentRverse"))
+  leave_prob_pred_lkp <- get("leave_prob_pred",  envir = asNamespace("sciCentRverse"))
+
   # Animals only, counts numeric
   d <- cons_main_report |>
     dplyr::filter(!species_common_name %in% c("STAFF/SETUP", "NONE"),
@@ -122,21 +143,15 @@ cam_calc_time_by_series <- function(
     stop("`image_date_time` must be POSIXct. Parse before calling.", call. = FALSE)
   }
 
-  # Resolve N-gap boundaries: flag images whose successor should start a new series
-  # regardless of the time gap (animal left FOV via a NONE-bridged gap).
-  if (!is.null(n_gap_df) && nrow(n_gap_df) > 0L) {
-    if (!all(c("image_id", "species_common_name") %in% names(n_gap_df))) {
-      warning(
-        "`n_gap_df` must contain `image_id` and `species_common_name`; ",
-        "N-gap splitting skipped.", call. = FALSE
-      )
-      d$.is_n_gap <- FALSE
-    } else {
-      n_gap_keys <- dplyr::distinct(n_gap_df, image_id, species_common_name) |>
-        dplyr::mutate(.is_n_gap = TRUE)
-      d <- dplyr::left_join(d, n_gap_keys, by = c("image_id", "species_common_name")) |>
-        dplyr::mutate(.is_n_gap = dplyr::coalesce(.is_n_gap, FALSE))
-    }
+  # Detect N-gap boundaries internally: images whose next same-species detection
+  # is separated by a NONE block. These force a new series regardless of time gap.
+  n_gap_df <- cam_obtain_n_gap_class(cons_main_report)
+
+  if (nrow(n_gap_df) > 0L) {
+    n_gap_keys <- dplyr::distinct(n_gap_df, image_id, species_common_name) |>
+      dplyr::mutate(.is_n_gap = TRUE)
+    d <- dplyr::left_join(d, n_gap_keys, by = c("image_id", "species_common_name")) |>
+      dplyr::mutate(.is_n_gap = dplyr::coalesce(.is_n_gap, FALSE))
   } else {
     d$.is_n_gap <- FALSE
   }
@@ -164,15 +179,49 @@ cam_calc_time_by_series <- function(
   d <- d |>
     dplyr::group_by(project, location, species_common_name, series_num) |>
     dplyr::mutate(
-      prev_ts      = dplyr::lag(image_date_time),
-      next_ts      = dplyr::lead(image_date_time),
-      diff_prev_s  = dplyr::if_else(dplyr::row_number() == 1L, 0,
-                                    as.numeric(difftime(image_date_time, prev_ts, units = "secs"))),
-      diff_next_s  = dplyr::if_else(dplyr::row_number() == dplyr::n(), 0,
-                                    as.numeric(difftime(next_ts, image_date_time, units = "secs"))),
-      is_bookend   = dplyr::row_number() == 1L | dplyr::row_number() == dplyr::n()
+      prev_ts     = dplyr::lag(image_date_time),
+      next_ts     = dplyr::lead(image_date_time),
+      diff_prev_s = dplyr::if_else(dplyr::row_number() == 1L, 0,
+                                   as.numeric(difftime(image_date_time, prev_ts, units = "secs"))),
+      diff_next_s = dplyr::if_else(dplyr::row_number() == dplyr::n(), 0,
+                                   as.numeric(difftime(next_ts, image_date_time, units = "secs"))),
+      is_bookend  = dplyr::row_number() == 1L | dplyr::row_number() == dplyr::n()
     ) |>
     dplyr::ungroup()
+
+  # --- Probabilistic time adjustment for within-series gaps of 20-120 s -------
+  # For gaps in this range, the animal may have temporarily left the field of
+  # view. The probability of leaving (`pred`) is species-group-specific and
+  # gap-length-specific. Both sides of the gap are scaled by (1 - pred).
+  if (adjust_gap_prob) {
+    d <- d |>
+      dplyr::left_join(gap_groups_lkp, by = "species_common_name") |>
+      dplyr::mutate(.diff_time_int = as.integer(round(diff_prev_s))) |>
+      dplyr::left_join(
+        leave_prob_pred_lkp,
+        by = c("gap_group" = "gap_group", ".diff_time_int" = "diff_time")
+      ) |>
+      # pred is NA when gap is outside 20-120 s range or species has no gap group
+      dplyr::mutate(
+        pred     = dplyr::coalesce(pred, 1),          # default pred=1 -> no adjustment
+        gap_prob = diff_prev_s >= 20 & diff_prev_s <= split_gap_secs & !is.na(gap_group),
+        # Adjust the gap on this image's "previous" side
+        diff_prev_s_adj = dplyr::if_else(gap_prob, diff_prev_s * (1 - pred), diff_prev_s),
+        # Adjust the same gap on the next image's "next" side (lead)
+        diff_next_s_adj = dplyr::if_else(
+          dplyr::lead(gap_prob, default = FALSE),
+          diff_next_s * (1 - dplyr::lead(pred, default = 1)),
+          diff_next_s
+        ),
+        diff_next_s_adj = dplyr::if_else(is.na(diff_next_s_adj), 0, diff_next_s_adj)
+      ) |>
+      dplyr::select(-.diff_time_int)
+  } else {
+    d <- d |>
+      dplyr::mutate(diff_prev_s_adj = diff_prev_s,
+                    diff_next_s_adj = diff_next_s)
+  }
+  # ---------------------------------------------------------------------------
 
   # Attach tbp (seconds) and warn if any species missing in lookup
   d <- d |>
@@ -189,13 +238,13 @@ cam_calc_time_by_series <- function(
     d$tbp[is.na(d$tbp)] <- 6
   }
 
-  # Image-level time (seconds); bookends add tbp/2
+  # Image-level time (seconds) using adjusted diffs; bookends add tbp/2
   d <- d |>
     dplyr::mutate(
       image_time_s    = dplyr::if_else(
         is_bookend,
-        ((diff_prev_s + diff_next_s) / 2) + (tbp / 2),
-        (diff_prev_s + diff_next_s) / 2
+        ((diff_prev_s_adj + diff_next_s_adj) / 2) + (tbp / 2),
+        (diff_prev_s_adj + diff_next_s_adj) / 2
       ),
       image_time_ni_s = image_time_s * dplyr::coalesce(individual_count, 1)
     )
@@ -204,10 +253,10 @@ cam_calc_time_by_series <- function(
   out <- d |>
     dplyr::group_by(project, location, species_common_name, series_num) |>
     dplyr::summarise(
-      n_images         = dplyr::n(),
-      series_total_time= sum(image_time_ni_s, na.rm = TRUE),  # seconds
-      series_start     = min(image_date_time),
-      series_end       = max(image_date_time),
+      n_images          = dplyr::n(),
+      series_total_time = sum(image_time_ni_s, na.rm = TRUE),  # seconds
+      series_start      = min(image_date_time),
+      series_end        = max(image_date_time),
       .groups = "drop"
     )
 

@@ -32,6 +32,23 @@ An internal R package for prototyping, testing, and refining reusable functions 
 }
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://ABbiodiversity.github.io/sciCentRverse/}
+  \item \url{https://github.com/ABbiodiversity/sciCentRverse}
+  \item Report bugs at \url{https://github.com/ABbiodiversity/sciCentRverse/issues}
+}
+
+
+Useful links:
+\itemize{
+  \item \url{https://ABbiodiversity.github.io/sciCentRverse/}
+  \item \url{https://github.com/ABbiodiversity/sciCentRverse}
+  \item Report bugs at \url{https://github.com/ABbiodiversity/sciCentRverse/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Brendan Casey \email{bgcasey@ualberta.ca}
 

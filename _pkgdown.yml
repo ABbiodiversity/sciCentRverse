@@ -47,6 +47,7 @@ reference:
       - parallel_extract_directory
       - read_tifs_to_list
       - read_tifs_to_multiband
+      - run_step
       - sample_blocks
       - select_one_response
       - select_species

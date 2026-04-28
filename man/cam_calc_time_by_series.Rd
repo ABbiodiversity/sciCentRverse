@@ -8,7 +8,8 @@ cam_calc_time_by_series(
   cons_main_report,
   split_gap_secs = 120,
   tbp_lookup = NULL,
-  n_gap_df = NULL
+  n_gap_df = NULL,
+  adjust_gap_prob = TRUE
 )
 }
 \arguments{
@@ -29,6 +30,13 @@ NONE block before the next same-species image) forces a new series to start on
 the image \emph{after} it, regardless of the time gap. This prevents a NONE-bridged
 pair from being counted as a single continuous series. Matched on
 \code{image_id} × \code{species_common_name}.}
+
+\item{adjust_gap_prob}{Logical. If \code{TRUE} (default), applies a species-specific
+probability-of-leaving-FOV correction to within-series gaps of 20–120 s, using
+the internal \code{gap_groups} and \code{leave_prob_pred} lookup tables. Set to \code{FALSE}
+to skip the adjustment and treat all within-series gaps as fully occupied — for
+example, to compare results under both assumptions or when working primarily
+with species not covered by the gap-group lookup.}
 }
 \value{
 Tibble with one row per series and species:
@@ -68,7 +76,32 @@ series. Bookends get zeros on the missing side.
 \item Bookend image time: \code{((diff_prev_s + diff_next_s)/2) + (tbp/2)}.
 \item Image time is multiplied by \code{individual_count} (coerced numeric) to obtain
 \code{image_time_ni_s}.
+\item Note: a single-image series receives \code{tbp/2} (not \code{tbp}) unless you choose to
+post-adjust downstream.
 }
+
+\strong{Probabilistic gap adjustment} (\code{adjust_gap_prob = TRUE})
+
+Within-series gaps of 20–120 s fall in an ambiguous zone: the gap is too short
+to confidently split into a new series, but long enough that the animal may
+have temporarily left the camera's field of view (FOV). To account for this,
+a species-group-specific probability of FOV departure (\code{pred}) is looked up from
+the internal \code{leave_prob_pred} table (derived from empirical gap-length models)
+and applied to both sides of the gap:
+
+\deqn{diff\_prev\_adj = diff\_prev \times (1 - pred)}
+\deqn{diff\_next\_adj = diff\_next \times (1 - pred)}
+
+This reduces the time credited across the gap proportionally to how likely it
+is the animal was absent. A gap of exactly 20 s receives only a small reduction;
+a gap near 120 s receives a much larger one.
+
+Species are assigned to gap groups via the internal \code{gap_groups} lookup. Any
+species not present in that lookup (e.g., uncommonly detected taxa) receives
+no adjustment — their within-series gaps are treated as though the animal was
+continuously present. If this concerns you for a given analysis, set
+\code{adjust_gap_prob = FALSE} to disable the adjustment entirely and inspect
+results under both assumptions.
 
 \strong{Time-between-photos (tbp)}
 \itemize{
@@ -79,30 +112,20 @@ seconds is used as a fallback.
 \item If \code{tbp_lookup} uses a different tbp column name (e.g., \code{time_between_photos},
 \code{tbi}, \code{tbp_seconds}), it is re-mapped to \code{tbp}.
 }
-
-\strong{Output}
-\itemize{
-\item One row per \verb{project × location × species_common_name × series_num}, with:
-\code{n_images}, \code{series_total_time} (seconds), \code{series_start}, and \code{series_end}.
-\item Note: a single-image series receives \code{tbp/2} (not \code{tbp}) unless you choose to
-post-adjust downstream.
-}
 }
 \examples{
 \dontrun{
 # cons_report is the output of cam_consolidate_tags()
-series <- cam_calc_time_by_series(
-  cons_report,
-  split_gap_secs = 120
-)
 
-# Optionally supply N-gap boundaries to split NONE-bridged series
+# Standard usage — probabilistic gap adjustment applied by default
+series <- cam_calc_time_by_series(cons_report)
+
+# With N-gap boundaries to split NONE-bridged series
 n_gaps <- cam_obtain_n_gap_class(cons_report)
-series <- cam_calc_time_by_series(
-  cons_report,
-  split_gap_secs = 120,
-  n_gap_df       = n_gaps
-)
+series <- cam_calc_time_by_series(cons_report, n_gap_df = n_gaps)
+
+# Disable probabilistic adjustment to compare results under both assumptions
+series_unadj <- cam_calc_time_by_series(cons_report, adjust_gap_prob = FALSE)
 }
 
 }

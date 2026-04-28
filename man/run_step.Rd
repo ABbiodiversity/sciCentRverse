@@ -25,7 +25,7 @@ optional logging to file and execution time tracking.
 This function:
 \itemize{
 \item Prints the step label and timing information to console
-\item Creates a timestamped log file in \code{2_pipeline/logs/}
+\item Creates a timestamped log file in \verb{2_pipeline/logs/}
 directory
 \item Redirects both standard output and messages to the log file
 \item Sources (executes) the specified script from \code{code_dir}
@@ -34,7 +34,7 @@ directory
 }
 
 Log files are named using the pattern:
-\code{YYYY-MM-DD_HH-MM-SS_<sanitized_label>.log}
+\verb{YYYY-MM-DD_HH-MM-SS_<sanitized_label>.log}
 Label sanitization converts non-alphanumeric characters to
 underscores.
 }
@@ -45,8 +45,8 @@ by the \code{enable_logging} variable.
 }
 \examples{
 \dontrun{
-code_dir <- "1_code/r_scripts"
-run_step("Data Import", "01_import_data.R")
-run_step("Data Cleaning", "02_clean_data.R")
+  code_dir <- "1_code/r_scripts"
+  run_step("Data Import", "01_import_data.R")
+  run_step("Data Cleaning", "02_clean_data.R")
 }
 }
