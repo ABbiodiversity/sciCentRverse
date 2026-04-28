@@ -41,8 +41,6 @@ Suggests:
     rnaturalearthhires,
     rstudioapi,
     styler
-Remotes:
-    ropensci/rnaturalearthhires
 Depends: 
     R (>= 3.5)
 VignetteBuilder: knitr
