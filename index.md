@@ -18,6 +18,7 @@ Development](https://img.shields.io/badge/Status-In%20Development-yellow)![Lifec
 You can install the package directly from GitHub:
 
 ``` r
+
 devtools::install_github("ABbiodiversity/sciCentRverse")
 ```
 
@@ -104,6 +105,7 @@ The package includes the following utility functions:
 ## Usage
 
 ``` r
+
 library(sciCentRverse)
 
 # Example: Convert strings to snake_case

@@ -13,7 +13,6 @@ cam_calc_time_by_series(
   cons_main_report,
   split_gap_secs = 120,
   tbp_lookup = NULL,
-  n_gap_df = NULL,
   adjust_gap_prob = TRUE
 )
 ```
@@ -22,9 +21,10 @@ cam_calc_time_by_series(
 
 - cons_main_report:
 
-  Data frame (after cam_consolidate_tags()) with at least: project,
-  location, image_id, image_date_time (POSIXct), species_common_name,
-  individual_count
+  Data frame (after
+  [`cam_consolidate_tags()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_consolidate_tags.md))
+  with at least: project, location, image_id, image_date_time (POSIXct),
+  species_common_name, individual_count
 
 - split_gap_secs:
 
@@ -37,17 +37,6 @@ cam_calc_time_by_series(
   function will try to use the internal package object `tbi` (from
   R/sysdata.rda). If that is not available, it falls back to tbp = 6
   seconds for all species and warns.
-
-- n_gap_df:
-
-  Optional output of
-  [`cam_obtain_n_gap_class()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_obtain_n_gap_class.md).
-  When supplied, any image flagged as an N-gap boundary (animal image
-  immediately followed by a NONE block before the next same-species
-  image) forces a new series to start on the image *after* it,
-  regardless of the time gap. This prevents a NONE-bridged pair from
-  being counted as a single continuous series. Matched on `image_id` ×
-  `species_common_name`.
 
 - adjust_gap_prob:
 
@@ -87,6 +76,13 @@ series_start, series_end
 - A new series starts at the first image or when the gap exceeds
   `split_gap_secs` (default 120 s). `series_num` is the cumulative count
   of such starts.
+
+- [`cam_obtain_n_gap_class()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_obtain_n_gap_class.md)
+  is called internally to detect NONE-bridged gaps — cases where an
+  animal image is separated from the next same-species image by one or
+  more `NONE` rows. These boundaries also force a new series regardless
+  of the time gap, preventing a NONE-bridged pair from inflating a
+  single series duration.
 
 **Per-image time allocation**
 
@@ -155,12 +151,8 @@ Marcus Becker
 if (FALSE) { # \dontrun{
 # cons_report is the output of cam_consolidate_tags()
 
-# Standard usage — probabilistic gap adjustment applied by default
+# Standard usage — N-gap detection and probabilistic gap adjustment applied automatically
 series <- cam_calc_time_by_series(cons_report)
-
-# With N-gap boundaries to split NONE-bridged series
-n_gaps <- cam_obtain_n_gap_class(cons_report)
-series <- cam_calc_time_by_series(cons_report, n_gap_df = n_gaps)
 
 # Disable probabilistic adjustment to compare results under both assumptions
 series_unadj <- cam_calc_time_by_series(cons_report, adjust_gap_prob = FALSE)

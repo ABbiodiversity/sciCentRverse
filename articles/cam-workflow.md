@@ -4,11 +4,11 @@
 
 The `cam_*()` family of functions can be used to implement a
 **time-in-front-of-camera (TIFC)** pipeline for estimating wildlife
-density at individual camera locations[¹](#fn1). The method calculates
-how much total time each species spends in the camera’s field of view,
-then converts that to an area-standardised density estimate
-(individuals/km²) using the camera’s effective detection distance (EDD)
-and the number of days it was operational.
+density at individual camera locations[^1]. The method calculates how
+much total time each species spends in the camera’s field of view, then
+converts that to an area-standardised density estimate (individuals/km²)
+using the camera’s effective detection distance (EDD) and the number of
+days it was operational.
 
 These functions are designed to work with the reports (i.e., output)
 from
@@ -22,6 +22,7 @@ using the data download functions available in the
 ## Prerequisites
 
 ``` r
+
 # Load packages
 library(wildrtrax)
 library(tidyverse)
@@ -31,14 +32,14 @@ library(sciCentRverse)
 The `cam_*()` functions depend on several internal lookup tables stored
 in the package’s `sysdata.rda`:
 
-| Object            | Contents                                                                 |
-|-------------------|--------------------------------------------------------------------------|
-| `native_sp`       | Character vector of recognized wildlife species names from WildTrax      |
-| `tbi`             | Per-species average time-between-images (seconds)                        |
-| `dist_groups`     | Mapping of species to EDD distance groups                                |
-| `edd`             | EDD lookup by dist_group × vegetation category × season × model × height |
-| `gap_groups`      | Grouping of time-gap classes for probabilistic gap adjustment            |
-| `leave_prob_pred` | Predicted probability of departure by gap_group and species_group        |
+| Object | Contents |
+|----|----|
+| `native_sp` | Character vector of recognized wildlife species names from WildTrax |
+| `tbi` | Per-species average time-between-images (seconds) |
+| `dist_groups` | Mapping of species to EDD distance groups |
+| `edd` | EDD lookup by dist_group × vegetation category × season × model × height |
+| `gap_groups` | Grouping of time-gap classes for probabilistic gap adjustment |
+| `leave_prob_pred` | Predicted probability of departure by gap_group and species_group |
 
 These are loaded automatically with the package and do not need to be
 supplied by the user.
@@ -54,6 +55,7 @@ Trajectories 2023](https://portal.wildtrax.ca/cam/2025) project using
 the `wt_download_report()` function from wildrtrax.
 
 ``` r
+
 # Authenticate into WildTrax
 wt_auth()
 
@@ -75,6 +77,7 @@ ls_bdt_reports <- wt_download_report(
 Extract and tidy image and main reports separately:
 
 ``` r
+
 # Image report: one row per image
 df_image_report <- ls_bdt_reports |>
   (\(x) x[str_detect(names(x), "image_report\\.csv$")])() |>
@@ -99,6 +102,7 @@ in-range image exists (i.e. `image_fov != "OOR"`). Images triggered by
 `"CodeLoc Not Entered"` are excluded entirely.
 
 ``` r
+
 df_days <- df_image_report |>
   cam_get_op_days(
     grouping   = c("project_id", "project", "location_id", "location"),
@@ -111,6 +115,7 @@ The result is a long tibble with one row per camera per day, with an
 `operating` logical column.
 
 ``` r
+
 head(df_days, 10)
 ```
 
@@ -124,6 +129,7 @@ Julian days of 99, 143, and 288, which correspond to the beginning of
 the spring, summer, and winter periods for downstream EDD calculations.
 
 ``` r
+
 # Standard ABMI season definitions
 seasons <- c(spring = 99L,   # ~April 9
              summer = 143L,  # ~May 23
@@ -142,6 +148,7 @@ The wide output has one row per camera location with columns `spring`,
 operational days.
 
 ``` r
+
 head(df_days_summary, 10)
 ```
 
@@ -158,6 +165,7 @@ concatenating age/sex classes, which is what is needed for downstream
 calculations.
 
 ``` r
+
 df_main_report_cons <- cam_consolidate_tags(df_main_report)
 ```
 
@@ -197,6 +205,7 @@ left the camera field of view:
   compare results under both assumptions.
 
 ``` r
+
 df_series <- cam_calc_time_by_series(df_main_report_cons)
 ```
 
@@ -205,6 +214,7 @@ The output is one row per series with columns `project`, `location`,
 (seconds), `series_start`, and `series_end`.
 
 ``` r
+
 head(df_series, 10)
 ```
 
@@ -216,6 +226,7 @@ zero-filling locations with no detections for any species in
 the`species_universe` argument.
 
 ``` r
+
 sp_uni <- c("White-tailed Deer", "Black Bear", "Moose",
             "Woodland Caribou", "Fisher", "Marten",
             "Coyote", "Snowshoe Hare", "Canada Lynx")
@@ -233,6 +244,7 @@ The output has one row per camera × species × season with
 days in that season).
 
 ``` r
+
 head(df_dur, 10)
 ```
 
@@ -248,6 +260,7 @@ derives a `model` label (`"hf2"` or `"pc900"`) for each camera from the
 `equipment_model`field in the image report.
 
 ``` r
+
 df_model <- df_image_report |>
   cam_extract_model_lookup(
     keys      = c("project", "project_id", "location", "location_id"),
@@ -272,6 +285,7 @@ EDD vegetation category (i.e., `edd_category_df`), as well as indicate
 the height of the camera.
 
 ``` r
+
 df_density <- df_dur |>
   left_join(df_model, by = c("project", "location")) |>
   mutate(height = "high") |>              # 1 m mounting height
@@ -295,6 +309,7 @@ zero detections do not reflect low density). This is controlled by
 `agg_exclude_species` and `agg_exclude_season`:
 
 ``` r
+
 # Default: exclude Bear × winter
 cam_calc_density_by_loc(
   ...,
@@ -314,6 +329,7 @@ cam_calc_density_by_loc(
 ## Full pipeline at a glance
 
 ``` r
+
 # 1. Operating days
 df_days <- df_image_reports |>
   cam_get_op_days(grouping = c("project_id", "project", "location_id", "location"),
@@ -349,7 +365,5 @@ df_density <- df_dur |>
                           annotate_edd_source = TRUE)
 ```
 
-------------------------------------------------------------------------
-
-1.  The TIFC method is described in [Becker et
+[^1]: The TIFC method is described in [Becker et
     al. 2022](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4005)

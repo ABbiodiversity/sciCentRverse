@@ -2,8 +2,8 @@
 
 Rolls up image-series time (seconds) to seasonal totals per deployment ×
 species and attaches the number of operating days per season. Seasons
-are assigned by Julian cutoffs you provide (e.g., spring = 99, summer =
-143, winter = 288). Output is ready to feed into density calculations
+are assigned by Julian cutoffs you provide (e.g., spring = 105, summer =
+125, winter = 300). Output is ready to feed into density calculations
 that require both `total_duration` and `total_season_days`.
 
 ## Usage
@@ -11,7 +11,7 @@ that require both `total_duration` and `total_season_days`.
 ``` r
 cam_sum_total_time(
   series_df,
-  season_cutoffs = c(spring = 99L, summer = 143L, winter = 288L),
+  season_cutoffs = c(spring = 105L, summer = 125L, winter = 300L),
   tz = Sys.timezone(),
   op_days_df,
   species_universe = NULL
@@ -27,8 +27,8 @@ cam_sum_total_time(
 
 - season_cutoffs:
 
-  Named integer vector of Julian cutoffs, e.g. c(spring=99L,
-  summer=143L, winter=288L). Labels come from names (lower-case
+  Named integer vector of Julian cutoffs, e.g. c(spring=105L,
+  summer=125L, winter=300L). Labels come from names (lower-case
   recommended for consistency with EDD lookups). Cutoffs are
   auto-sorted, so order does not matter.
 
@@ -127,7 +127,7 @@ if (FALSE) { # \dontrun{
 # op_days is the output of cam_summarise_op_by_season(wide = TRUE)
 dur <- cam_sum_total_time(
   series_df        = series,
-  season_cutoffs   = c(spring = 99L, summer = 143L, winter = 288L),
+  season_cutoffs   = c(spring = 105L, summer = 125L, winter = 300L),
   op_days_df       = op_days,
   species_universe = c("White-tailed Deer", "Moose", "Black Bear")
 )

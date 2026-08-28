@@ -12,7 +12,7 @@ wrap the year.
 cam_summarise_op_by_season(
   calendar_df,
   grouping = c("project", "project_id", "location", "location_id"),
-  seasons = c(spring = 99, summer = 143, winter = 288),
+  seasons = c(spring = 105, summer = 125, winter = 300),
   labels = NULL,
   date_col = "date",
   operating_col = "operating",
@@ -40,7 +40,9 @@ cam_summarise_op_by_season(
 
   Season starts. Named numeric, unnamed numeric + `labels`, or a data
   frame with `season` and `start` columns. Defaults to
-  `c(spring = 99, summer = 143, winter = 288)`.
+  `c(spring = 105, summer = 125, winter = 300)` (spring = April 15,
+  pre-leaf-burst; summer = May 5, green-up complete; winter = October
+  27, leaf-off / consistent snow cover).
 
 - labels:
 
@@ -81,10 +83,10 @@ mode: grouping cols (+ `year`), `season`, `operating_days`, and
 forms:
 
 - **Named numeric vector** (recommended): e.g.,
-  `c(spring = 99, summer = 143, winter = 288)`.
+  `c(spring = 105, summer = 125, winter = 300)`.
 
 - **Unnamed numeric + `labels=`**: e.g.,
-  `seasons = c(99, 143, 288), labels = c("spring","summer","winter")`.
+  `seasons = c(105, 125, 300), labels = c("spring","summer","winter")`.
 
 - **Data frame** with columns `season` (labels) and `start` (Julian
   day).

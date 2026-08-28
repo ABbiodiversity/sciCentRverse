@@ -65,8 +65,8 @@ If none are found, returns an empty tibble and warns.
 ## See also
 
 [`cam_calc_time_by_series()`](https://ABbiodiversity.github.io/sciCentRverse/reference/cam_calc_time_by_series.md)
-which accepts the output of this function via its `n_gap_df` parameter
-to force series splits at NONE-bridged boundaries.
+which calls this function internally to force series splits at
+NONE-bridged boundaries.
 
 ## Author
 
