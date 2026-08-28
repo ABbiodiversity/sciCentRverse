@@ -7,7 +7,7 @@
 cam_summarise_op_by_season(
   calendar_df,
   grouping = c("project", "project_id", "location", "location_id"),
-  seasons = c(spring = 99, summer = 143, winter = 288),
+  seasons = c(spring = 105, summer = 125, winter = 300),
   labels = NULL,
   date_col = "date",
   operating_col = "operating",
@@ -26,7 +26,9 @@ are used. If none are present, aggregation is global.}
 
 \item{seasons}{Season starts. Named numeric, unnamed numeric + \code{labels}, or a
 data frame with \code{season} and \code{start} columns. Defaults to
-\code{c(spring = 99, summer = 143, winter = 288)}.}
+\code{c(spring = 105, summer = 125, winter = 300)} (spring = April 15, pre-leaf-burst;
+summer = May 5, green-up complete; winter = October 27, leaf-off / consistent
+snow cover).}
 
 \item{labels}{Optional labels if \code{seasons} is an unnamed numeric vector.}
 
@@ -56,8 +58,8 @@ by Julian day \strong{start} cutoffs and can be 1..n segments that wrap the year
 \strong{Season definitions} (\code{seasons}) can be supplied in any of these forms:
 \itemize{
 \item \strong{Named numeric vector} (recommended): e.g.,
-\code{c(spring = 99, summer = 143, winter = 288)}.
-\item \strong{Unnamed numeric + \verb{labels=}}: e.g., \verb{seasons = c(99, 143, 288), labels = c("spring","summer","winter")}.
+\code{c(spring = 105, summer = 125, winter = 300)}.
+\item \strong{Unnamed numeric + \verb{labels=}}: e.g., \verb{seasons = c(105, 125, 300), labels = c("spring","summer","winter")}.
 \item \strong{Data frame} with columns \code{season} (labels) and \code{start} (Julian day).
 }
 

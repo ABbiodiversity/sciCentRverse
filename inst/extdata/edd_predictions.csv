@@ -1,577 +1,721 @@
-dist_group,overall_category,season,height,model,n,edd,preserve_height,preserve_season,preserve_model,edd_filled,fill_level
-Bear,Forested_Closed-Closed,spring,high,hf2,0,5.203156906064167,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Closed-Closed,spring,high,pc900,27,5.249053063874525,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Closed-Closed,spring,low,hf2,12,5.2028824077067375,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Closed-Closed,spring,low,pc900,0,5.203156906064167,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Closed-Closed,summer,high,hf2,6,5.21140369543701,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Closed-Closed,summer,high,pc900,102,5.21140369543701,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Closed-Closed,summer,low,hf2,24,5.172099286964859,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Closed-Closed,summer,low,pc900,6,5.172099286964859,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Closed-Closed,winter,high,hf2,0,5.203156906064167,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Closed-Closed,winter,high,pc900,0,5.203156906064167,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Closed-Closed,winter,low,hf2,0,5.203156906064167,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Closed-Closed,winter,low,pc900,0,5.203156906064167,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Closed,spring,high,hf2,1,5.92371578553907,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Closed,spring,high,pc900,61,5.818500520848313,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Closed,spring,low,hf2,16,5.67281940796209,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Closed,spring,low,pc900,0,5.92371578553907,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Closed,summer,high,hf2,12,5.699888970130565,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Closed,summer,high,pc900,113,5.699888970130565,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Closed,summer,low,hf2,28,5.574312063171558,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Closed,summer,low,pc900,12,5.574312063171558,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Closed,winter,high,hf2,1,5.92371578553907,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Closed,winter,high,pc900,6,7.4262885033588395,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Closed,winter,low,hf2,0,5.92371578553907,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Closed,winter,low,pc900,1,5.92371578553907,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Open,spring,high,hf2,13,6.3649684700180185,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Open,spring,high,pc900,98,6.3649684700180185,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Open,spring,low,hf2,14,6.130257231275511,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Open,spring,low,pc900,0,6.164010160750151,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Open,summer,high,hf2,18,6.174089243334629,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Open,summer,high,pc900,255,6.174089243334629,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Open,summer,low,hf2,11,5.9698492336351245,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Open,summer,low,pc900,23,5.9698492336351245,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Forested_Open-Open,winter,high,hf2,1,6.164010160750151,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Open,winter,high,pc900,0,6.164010160750151,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Open,winter,low,hf2,0,6.164010160750151,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Forested_Open-Open,winter,low,pc900,0,6.164010160750151,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,spring,high,hf2,1,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,spring,high,pc900,19,6.194304441583712,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Open_Open,spring,low,hf2,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,spring,low,pc900,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,summer,high,hf2,3,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,summer,high,pc900,26,6.025501281180657,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Open_Open,summer,low,hf2,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,summer,low,pc900,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,winter,high,hf2,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,winter,high,pc900,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,winter,low,hf2,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Open_Open,winter,low,pc900,0,6.109902861382184,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,spring,high,hf2,0,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,spring,high,pc900,11,5.585335655523216,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Closed,spring,low,hf2,0,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,spring,low,pc900,0,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,summer,high,hf2,2,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,summer,high,pc900,47,5.49909162021118,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Closed,summer,low,hf2,8,5.408267852665577,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Closed,summer,low,pc900,8,5.408267852665577,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Closed,winter,high,hf2,0,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,winter,high,pc900,0,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,winter,low,hf2,0,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Closed,winter,low,pc900,0,5.475240745266388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,spring,high,hf2,1,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,spring,high,pc900,30,6.965030920465167,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Open,spring,low,hf2,0,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,spring,low,pc900,0,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,summer,high,hf2,10,6.699558543202373,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Open,summer,high,pc900,88,6.699558543202373,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Open,summer,low,hf2,0,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,summer,low,pc900,41,6.412870494304424,FALSE,FALSE,FALSE,FALSE,NA
-Bear,Shrubby_Open,winter,high,hf2,0,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,winter,high,pc900,0,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,winter,low,hf2,0,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Bear,Shrubby_Open,winter,low,pc900,0,6.694254625293585,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
-Coyote,Forested_Closed-Closed,spring,high,hf2,0,6.980919800856608,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Closed-Closed,spring,high,pc900,13,6.980919800856608,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,spring,low,hf2,11,6.07198270218091,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,spring,low,pc900,0,6.07198270218091,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Closed-Closed,summer,high,hf2,5,6.37757608411486,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,summer,high,pc900,10,6.37757608411486,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,summer,low,hf2,7,5.73047052865178,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,summer,low,pc900,1,5.73047052865178,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Closed-Closed,winter,high,hf2,10,7.093477263364918,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,winter,high,pc900,6,7.093477263364918,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,winter,low,hf2,18,6.1368738154652585,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Closed-Closed,winter,low,pc900,1,6.1368738154652585,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Closed,spring,high,hf2,0,5.986573380243868,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Closed,spring,high,pc900,32,5.986573380243868,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Closed,spring,low,hf2,25,5.515487755465863,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Closed,spring,low,pc900,1,5.515487755465863,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Closed,summer,high,hf2,0,5.67081439939714,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Closed,summer,high,pc900,25,5.67081439939714,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Closed,summer,low,hf2,11,5.346005775449896,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Closed,summer,low,pc900,4,5.346005775449896,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Closed,winter,high,hf2,0,6.046698363476321,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Closed,winter,high,pc900,31,6.046698363476321,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Closed,winter,low,hf2,9,5.548191331531494,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Closed,winter,low,pc900,4,5.548191331531494,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Open,spring,high,hf2,5,8.010570043308963,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,spring,high,pc900,38,8.010570043308963,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,spring,low,hf2,14,6.677462099418193,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,spring,low,pc900,5,6.677462099418193,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,summer,high,hf2,5,7.132140912673233,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,summer,high,pc900,39,7.132140912673233,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,summer,low,hf2,17,6.159243615944604,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,summer,low,pc900,2,6.159243615944604,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Open,winter,high,hf2,6,8.172132720990414,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,winter,high,pc900,68,8.172132720990414,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Forested_Open-Open,winter,low,hf2,2,6.77466011922207,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Forested_Open-Open,winter,low,pc900,6,6.77466011922207,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Open_Open,spring,high,hf2,18,11.690063166289233,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Open_Open,spring,high,pc900,395,11.690063166289233,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Open_Open,spring,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Open_Open,spring,low,pc900,2,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Open_Open,summer,high,hf2,22,9.936743509675285,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Open_Open,summer,high,pc900,327,9.936743509675285,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Open_Open,summer,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Open_Open,summer,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Open_Open,winter,high,hf2,6,12.004609425975689,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Open_Open,winter,high,pc900,353,12.004609425975689,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Open_Open,winter,low,hf2,0,9.196039055878009,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Open_Open,winter,low,pc900,15,9.196039055878009,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Closed,spring,high,hf2,0,5.864726956767022,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Shrubby_Closed,spring,high,pc900,14,5.864726956767022,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Closed,spring,low,hf2,2,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Shrubby_Closed,spring,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Shrubby_Closed,summer,high,hf2,1,5.586097940399356,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Shrubby_Closed,summer,high,pc900,6,5.586097940399356,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Closed,summer,low,hf2,2,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Shrubby_Closed,summer,low,pc900,3,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Shrubby_Closed,winter,high,hf2,55,5.917950143800718,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Closed,winter,high,pc900,21,5.917950143800718,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Closed,winter,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Shrubby_Closed,winter,low,pc900,1,NA,TRUE,TRUE,FALSE,TRUE,NA
-Coyote,Shrubby_Open,spring,high,hf2,0,8.313192362263916,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Shrubby_Open,spring,high,pc900,60,8.313192362263916,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Open,spring,low,hf2,0,6.859953158142273,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Shrubby_Open,spring,low,pc900,12,6.859953158142273,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Open,summer,high,hf2,28,7.357294078477794,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Open,summer,high,pc900,41,7.357294078477794,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Open,summer,low,hf2,0,6.290292241392504,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Shrubby_Open,summer,low,pc900,9,6.290292241392504,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Open,winter,high,hf2,22,8.488428917074083,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Open,winter,high,pc900,77,8.488428917074083,TRUE,TRUE,FALSE,FALSE,NA
-Coyote,Shrubby_Open,winter,low,hf2,1,6.966446611296114,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Coyote,Shrubby_Open,winter,low,pc900,11,6.966446611296114,TRUE,TRUE,FALSE,FALSE,NA
-Deer,Forested_Closed-Closed,spring,high,hf2,0,5.700937225522057,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Closed-Closed,spring,high,pc900,32,5.74381435941546,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Closed-Closed,spring,low,hf2,15,5.4649829903719,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Closed-Closed,spring,low,pc900,0,5.464023579289469,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Closed-Closed,summer,high,hf2,2,5.700937225522057,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Closed-Closed,summer,high,pc900,36,5.740815834012714,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Closed-Closed,summer,low,hf2,21,5.463064168207039,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Closed-Closed,summer,low,pc900,2,5.464023579289469,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Closed-Closed,winter,high,hf2,22,5.659559354330033,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Closed-Closed,winter,high,pc900,22,5.659559354330022,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Closed-Closed,winter,low,hf2,1,5.464023579289469,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Closed-Closed,winter,low,pc900,1,5.464023579289469,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Open-Closed,spring,high,hf2,4,6.635188885810319,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Open-Closed,spring,high,pc900,111,6.683182175509338,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,spring,low,hf2,33,6.080637567367252,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,spring,low,pc900,0,6.048626983030928,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Open-Closed,summer,high,hf2,6,6.67683929090803,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,summer,high,pc900,245,6.676839290908004,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,summer,low,hf2,53,6.076393141119909,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,summer,low,pc900,6,6.076393141119891,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,winter,high,hf2,4,6.635188885810319,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Open-Closed,winter,high,pc900,85,6.503894785915904,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,winter,low,hf2,7,5.9610840825166616,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Closed,winter,low,pc900,2,6.048626983030928,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Open-Open,spring,high,hf2,6,7.608533484314912,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,spring,high,pc900,141,7.608533484314875,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,spring,low,hf2,21,6.710207959812106,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,spring,low,pc900,5,6.710207959812079,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,summer,high,hf2,39,7.599213873065147,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,summer,high,pc900,412,7.59921387306511,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,summer,low,hf2,38,6.703774308830258,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,summer,low,pc900,20,6.7037743088302335,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,winter,high,hf2,44,7.344079625576772,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,winter,high,pc900,178,7.344079625576738,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Forested_Open-Open,winter,low,hf2,1,6.671258954604831,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Forested_Open-Open,winter,low,pc900,12,6.528330235739477,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Open_Open,spring,high,hf2,62,8.222329667029607,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Open_Open,spring,high,pc900,531,8.222329667029562,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Open_Open,spring,low,hf2,0,6.915523350140447,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Open_Open,spring,low,pc900,2,6.915523350140447,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Open_Open,summer,high,hf2,78,8.211157178349696,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Open_Open,summer,high,pc900,1083,8.21115717834965,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Open_Open,summer,low,hf2,0,6.915523350140447,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Open_Open,summer,low,pc900,4,6.915523350140447,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Open_Open,winter,high,hf2,33,7.904693644030343,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Open_Open,winter,high,pc900,279,7.904693644030301,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Open_Open,winter,low,hf2,0,6.915523350140447,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Open_Open,winter,low,pc900,9,6.915523350140447,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Closed,spring,high,hf2,0,6.587535412370684,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Closed,spring,high,pc900,48,6.678538005646072,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Closed,spring,low,hf2,0,6.073296561196053,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Closed,spring,low,pc900,0,6.073296561196053,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Closed,summer,high,hf2,2,6.587535412370684,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Closed,summer,high,pc900,118,6.672210744951861,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Closed,summer,low,hf2,0,6.073296561196053,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Closed,summer,low,pc900,7,6.073296561196053,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Closed,winter,high,hf2,76,6.499696449442414,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Closed,winter,high,pc900,21,6.49969644944239,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Closed,winter,low,hf2,1,6.073296561196053,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Closed,winter,low,pc900,1,6.073296561196053,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Open,spring,high,hf2,1,8.516455766025809,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Open,spring,high,pc900,145,8.6632649847402,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Open,spring,low,hf2,0,7.361969932897806,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Open,spring,low,pc900,8,7.448303233137604,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Open,summer,high,hf2,19,8.650807645685967,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Open,summer,high,pc900,275,8.650807645685916,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Open,summer,low,hf2,0,7.361969932897806,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Open,summer,low,pc900,42,7.439481641003202,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Open,winter,high,hf2,44,8.308699277008502,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Open,winter,high,pc900,100,8.308699277008458,TRUE,FALSE,FALSE,FALSE,NA
-Deer,Shrubby_Open,winter,low,hf2,0,7.361969932897806,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
-Deer,Shrubby_Open,winter,low,pc900,19,7.198124924552613,TRUE,FALSE,FALSE,FALSE,NA
-Hare,Forested_Closed-Closed,spring,high,hf2,3,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Closed-Closed,spring,high,pc900,61,5.279307809634954,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Closed-Closed,spring,low,hf2,6,5.1734159425785355,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Closed-Closed,spring,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Closed-Closed,summer,high,hf2,15,5.76022849484419,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Closed-Closed,summer,high,pc900,35,5.328308232526013,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Closed-Closed,summer,low,hf2,3,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Closed-Closed,summer,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Closed-Closed,winter,high,hf2,163,5.883249489887494,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Closed-Closed,winter,high,pc900,257,5.383736957868567,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Closed-Closed,winter,low,hf2,31,5.239129492761754,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Closed-Closed,winter,low,pc900,1,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Open-Closed,spring,high,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Open-Closed,spring,high,pc900,191,5.4743931621160575,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,spring,low,hf2,20,5.2965410416556304,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,spring,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Open-Closed,summer,high,hf2,9,6.257593845395973,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,summer,high,pc900,115,5.555947867183757,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,summer,low,hf2,9,5.348468941698742,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,summer,low,pc900,5,5.147310784055604,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,winter,high,hf2,15,6.45263618290556,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,winter,high,pc900,503,5.647668993887038,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,winter,low,hf2,56,5.407177307470117,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Closed,winter,low,pc900,8,5.172673909750802,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,spring,high,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Open-Open,spring,high,pc900,178,5.648377460549236,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,spring,low,hf2,16,5.407632018923493,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,spring,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Open-Open,summer,high,hf2,7,6.683648918300524,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,summer,high,pc900,74,5.757958610304051,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,summer,low,hf2,24,5.478187338730696,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,summer,low,pc900,1,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Forested_Open-Open,winter,high,hf2,10,6.936545552765339,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,winter,high,pc900,457,5.880637849462985,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,winter,low,hf2,42,5.557688550509563,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Forested_Open-Open,winter,low,pc900,1,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,spring,high,hf2,1,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,spring,high,pc900,19,5.416705675819948,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Open_Open,spring,low,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,spring,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,summer,high,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,summer,high,pc900,5,5.488764320849,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Open_Open,summer,low,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,summer,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,winter,high,hf2,1,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,winter,high,pc900,37,5.569938138869827,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Open_Open,winter,low,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Open_Open,winter,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,spring,high,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,spring,high,pc900,25,5.694146566263801,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Closed,spring,low,hf2,4,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,spring,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,summer,high,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,summer,high,pc900,2,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,summer,low,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,summer,low,pc900,2,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,winter,high,hf2,14,7.060720489634103,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Closed,winter,high,pc900,85,5.941580803771257,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Closed,winter,low,hf2,1,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Closed,winter,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Open,spring,high,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Open,spring,high,pc900,40,5.481552930584812,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Open,spring,low,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Open,spring,low,pc900,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Open,summer,high,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Open,summer,high,pc900,5,5.564278907468496,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Open,summer,low,hf2,0,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Open,summer,low,pc900,26,5.149602495961205,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Open,winter,high,hf2,12,6.472954769187411,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Open,winter,high,pc900,82,5.657298852036377,TRUE,TRUE,TRUE,FALSE,NA
-Hare,Shrubby_Open,winter,low,hf2,4,NA,TRUE,TRUE,TRUE,TRUE,NA
-Hare,Shrubby_Open,winter,low,pc900,11,5.1753536077013536,TRUE,TRUE,TRUE,FALSE,NA
-LargeUngulates,Forested_Closed-Closed,spring,high,hf2,0,5.475882743754913,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Forested_Closed-Closed,spring,high,pc900,46,5.475882743754913,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Closed-Closed,spring,low,hf2,7,5.3568363970376645,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Closed-Closed,spring,low,pc900,0,5.3568363970376645,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Forested_Closed-Closed,summer,high,hf2,10,5.3575967127494195,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Closed-Closed,summer,high,pc900,109,5.3575967127494195,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Closed-Closed,summer,low,hf2,43,5.267421787668119,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Closed-Closed,summer,low,pc900,1,5.267421787668119,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Forested_Closed-Closed,winter,high,hf2,2,5.376019576623176,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Forested_Closed-Closed,winter,high,pc900,16,5.376019576623176,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Closed-Closed,winter,low,hf2,3,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Forested_Closed-Closed,winter,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Forested_Open-Closed,spring,high,hf2,3,6.0848595999309625,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Forested_Open-Closed,spring,high,pc900,114,6.0848595999309625,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,spring,low,hf2,8,5.823637603534009,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,spring,low,pc900,8,5.823637603534009,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,summer,high,hf2,8,5.825324502523529,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,summer,high,pc900,305,5.825324502523529,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,summer,low,hf2,46,5.623455601541997,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,summer,low,pc900,39,5.623455601541997,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,winter,high,hf2,4,5.866123365416313,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Forested_Open-Closed,winter,high,pc900,193,5.866123365416313,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,winter,low,hf2,5,5.6548086494821055,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Closed,winter,low,pc900,17,5.6548086494821055,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,spring,high,hf2,9,7.664741762123388,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,spring,high,pc900,268,7.664741762123388,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,spring,low,hf2,6,7.072359039974867,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,spring,low,pc900,1,7.072359039974867,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Forested_Open-Open,summer,high,hf2,38,7.076256755070135,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,summer,high,pc900,403,7.076256755070135,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,summer,low,hf2,11,6.602076816598016,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,summer,low,pc900,37,6.602076816598016,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,winter,high,hf2,9,7.170219701304826,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,winter,high,pc900,202,7.170219701304826,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,winter,low,hf2,8,6.676809078539833,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Forested_Open-Open,winter,low,pc900,7,6.676809078539833,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Open_Open,spring,high,hf2,6,9.070445387566064,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Open_Open,spring,high,pc900,182,9.070445387566064,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Open_Open,spring,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Open_Open,spring,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Open_Open,summer,high,hf2,27,8.21895307423707,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Open_Open,summer,high,pc900,314,8.21895307423707,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Open_Open,summer,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Open_Open,summer,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Open_Open,winter,high,hf2,6,8.356012768396717,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Open_Open,winter,high,pc900,51,8.356012768396717,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Open_Open,winter,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Open_Open,winter,low,pc900,3,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Shrubby_Closed,spring,high,hf2,0,6.615598918808755,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Shrubby_Closed,spring,high,pc900,99,6.615598918808755,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Closed,spring,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Shrubby_Closed,spring,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Shrubby_Closed,summer,high,hf2,4,6.240383452716047,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Shrubby_Closed,summer,high,pc900,114,6.240383452716047,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Closed,summer,low,hf2,19,5.944389652598025,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Closed,summer,low,pc900,2,5.944389652598025,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Shrubby_Closed,winter,high,hf2,17,6.299742359121666,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Closed,winter,high,pc900,55,6.299742359121666,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Closed,winter,low,hf2,4,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Shrubby_Closed,winter,low,pc900,2,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Shrubby_Open,spring,high,hf2,0,7.59061106217657,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Shrubby_Open,spring,high,pc900,84,7.59061106217657,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Open,spring,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Shrubby_Open,spring,low,pc900,1,NA,TRUE,TRUE,FALSE,TRUE,NA
-LargeUngulates,Shrubby_Open,summer,high,hf2,3,7.016638113756709,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Shrubby_Open,summer,high,pc900,163,7.016638113756709,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Open,summer,low,hf2,0,6.55473583353866,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Shrubby_Open,summer,low,pc900,25,6.55473583353866,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Open,winter,high,hf2,35,7.1082342417868105,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Open,winter,high,pc900,70,7.1082342417868105,TRUE,TRUE,FALSE,FALSE,NA
-LargeUngulates,Shrubby_Open,winter,low,hf2,1,6.627493449819658,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-LargeUngulates,Shrubby_Open,winter,low,pc900,7,6.627493449819658,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Closed-Closed,spring,high,hf2,0,5.147516386416794,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Closed-Closed,spring,high,pc900,30,5.147516386416794,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Closed-Closed,spring,low,hf2,7,5.061015127635821,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Closed-Closed,spring,low,pc900,0,5.061015127635821,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Closed-Closed,summer,high,hf2,0,5.083760776390686,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Closed-Closed,summer,high,pc900,11,5.083760776390686,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Closed-Closed,summer,low,hf2,4,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Forested_Closed-Closed,summer,low,pc900,2,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Forested_Closed-Closed,winter,high,hf2,0,5.20918917193833,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Closed-Closed,winter,high,pc900,168,5.20918917193833,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Closed-Closed,winter,low,hf2,13,5.08682707600624,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Closed-Closed,winter,low,pc900,1,5.08682707600624,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Closed,spring,high,hf2,0,5.556827005051905,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Closed,spring,high,pc900,60,5.556827005051905,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Closed,spring,low,hf2,21,5.235517503212716,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Closed,spring,low,pc900,0,5.235517503212716,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Closed,summer,high,hf2,0,5.321351497262149,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Closed,summer,high,pc900,56,5.321351497262149,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Closed,summer,low,hf2,11,5.134216532996914,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Closed,summer,low,pc900,3,5.134216532996914,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Closed,winter,high,hf2,0,5.778110854546791,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Closed,winter,high,pc900,353,5.778110854546791,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Closed,winter,low,hf2,46,5.332846089383378,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Closed,winter,low,pc900,10,5.332846089383378,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Open,spring,high,hf2,0,6.441169437875472,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Open,spring,high,pc900,65,6.441169437875472,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Open,spring,low,hf2,2,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Forested_Open-Open,spring,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Forested_Open-Open,summer,high,hf2,0,5.85692319288396,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Open,summer,high,pc900,25,5.85692319288396,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Open,summer,low,hf2,2,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Forested_Open-Open,summer,low,pc900,1,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Forested_Open-Open,winter,high,hf2,0,6.965935359375393,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Forested_Open-Open,winter,high,pc900,210,6.965935359375393,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Open,winter,low,hf2,12,5.886175717913582,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Forested_Open-Open,winter,low,pc900,4,5.886175717913582,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Open_Open,spring,high,hf2,0,6.895780782863263,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Open_Open,spring,high,pc900,8,6.895780782863263,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Open_Open,spring,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Open_Open,spring,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Open_Open,summer,high,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Open_Open,summer,high,pc900,3,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Open_Open,summer,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Open_Open,summer,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Open_Open,winter,high,hf2,0,7.561380619140348,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Open_Open,winter,high,pc900,26,7.561380619140348,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Open_Open,winter,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Open_Open,winter,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Closed,spring,high,hf2,0,6.148505967710333,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Shrubby_Closed,spring,high,pc900,10,6.148505967710333,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Shrubby_Closed,spring,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Closed,spring,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Closed,summer,high,hf2,0,5.676670566200345,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Shrubby_Closed,summer,high,pc900,16,5.676670566200345,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Shrubby_Closed,summer,low,hf2,0,5.287979993132271,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Shrubby_Closed,summer,low,pc900,5,5.287979993132271,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Shrubby_Closed,winter,high,hf2,0,6.577807537269293,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Shrubby_Closed,winter,high,pc900,47,6.577807537269293,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Shrubby_Closed,winter,low,hf2,1,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Closed,winter,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Open,spring,high,hf2,0,6.614477996003882,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Shrubby_Open,spring,high,pc900,15,6.614477996003882,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Shrubby_Open,spring,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Open,spring,low,pc900,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Open,summer,high,hf2,0,5.964916430378042,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Shrubby_Open,summer,high,pc900,8,5.964916430378042,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Shrubby_Open,summer,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Open,summer,low,pc900,4,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Open,winter,high,hf2,0,7.193911961996321,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
-Lynx,Shrubby_Open,winter,high,pc900,47,7.193911961996321,TRUE,TRUE,FALSE,FALSE,NA
-Lynx,Shrubby_Open,winter,low,hf2,0,NA,TRUE,TRUE,FALSE,TRUE,NA
-Lynx,Shrubby_Open,winter,low,pc900,1,NA,TRUE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Forested_Closed-Closed,spring,high,hf2,0,5.692934746958129,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Closed-Closed,spring,high,pc900,12,5.692934746958129,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Closed-Closed,spring,low,hf2,3,5.692934746958129,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Closed-Closed,spring,low,pc900,0,5.692934746958129,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Closed-Closed,summer,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Forested_Closed-Closed,summer,high,pc900,3,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Forested_Closed-Closed,summer,low,hf2,1,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Forested_Closed-Closed,summer,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Forested_Closed-Closed,winter,high,hf2,0,5.380232986707653,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Closed-Closed,winter,high,pc900,23,5.428114280469806,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Closed-Closed,winter,low,hf2,16,5.332351692945499,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Closed-Closed,winter,low,pc900,0,5.380232986707653,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Closed,spring,high,hf2,0,5.814324958511131,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Closed,spring,high,pc900,33,5.9132344408640805,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Closed,spring,low,hf2,7,5.715415476158181,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Closed,spring,low,pc900,0,5.814324958511131,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Closed,summer,high,hf2,0,5.224381413423961,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Closed,summer,high,pc900,18,5.264248801306037,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Closed,summer,low,hf2,9,5.204447719482923,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Closed,summer,low,pc900,7,5.204447719482923,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Closed,winter,high,hf2,0,5.505270946524002,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Closed,winter,high,pc900,59,5.568212110791292,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Closed,winter,low,hf2,103,5.442329782256711,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Closed,winter,low,pc900,3,5.505270946524002,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Open,spring,high,hf2,0,5.92794294782953,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Open,spring,high,pc900,22,6.039667291982002,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Open,spring,low,hf2,19,5.816218603677058,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Open,spring,low,pc900,2,5.92794294782953,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Open,summer,high,hf2,0,5.268960156573115,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Open,summer,high,pc900,20,5.303168444943767,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Open,summer,low,hf2,2,5.268960156573115,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Open,summer,low,pc900,7,5.234751868202465,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Open,winter,high,hf2,0,5.553995260055651,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Forested_Open-Open,winter,high,pc900,81,5.649384754902854,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Open,winter,low,hf2,73,5.506300512632049,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Forested_Open-Open,winter,low,pc900,7,5.506300512632049,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Open_Open,spring,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,spring,high,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,spring,low,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,spring,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,summer,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,summer,high,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,summer,low,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,summer,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Open_Open,winter,high,hf2,0,5.000000159730518,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Open_Open,winter,high,pc900,7,5.000000159730518,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Open_Open,winter,low,hf2,0,5.000000159730518,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Open_Open,winter,low,pc900,0,5.000000159730518,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Shrubby_Closed,spring,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,spring,high,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,spring,low,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,spring,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,summer,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,summer,high,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,summer,low,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,summer,low,pc900,2,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,winter,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,winter,high,pc900,4,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,winter,low,hf2,2,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Closed,winter,low,pc900,3,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,spring,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,spring,high,pc900,4,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,spring,low,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,spring,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,summer,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,summer,high,pc900,1,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,summer,low,hf2,2,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,summer,low,pc900,4,NA,FALSE,TRUE,FALSE,TRUE,NA
-SmallMustelids,Shrubby_Open,winter,high,hf2,0,6.658239005452176,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Shrubby_Open,winter,high,pc900,18,6.658239005452176,FALSE,TRUE,FALSE,FALSE,NA
-SmallMustelids,Shrubby_Open,winter,low,hf2,0,6.658239005452176,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-SmallMustelids,Shrubby_Open,winter,low,pc900,1,6.658239005452176,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Closed-Closed,spring,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Forested_Closed-Closed,spring,high,pc900,2,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Forested_Closed-Closed,spring,low,hf2,2,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Forested_Closed-Closed,spring,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Forested_Closed-Closed,summer,high,hf2,0,5.0873558007348505,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Closed-Closed,summer,high,pc900,6,5.0873558007348505,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Closed-Closed,summer,low,hf2,2,5.0873558007348505,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Closed-Closed,summer,low,pc900,0,5.0873558007348505,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Closed-Closed,winter,high,hf2,0,5.212236786633253,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Closed-Closed,winter,high,pc900,27,5.212236786633253,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Closed-Closed,winter,low,hf2,2,5.212236786633253,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Closed-Closed,winter,low,pc900,0,5.212236786633253,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Closed,spring,high,hf2,0,6.822372240898559,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Closed,spring,high,pc900,29,6.297881321664664,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Closed,spring,low,hf2,11,7.346863160132456,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Closed,spring,low,pc900,0,6.822372240898559,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Closed,summer,high,hf2,0,6.664685232061934,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Closed,summer,high,pc900,14,6.181130718853111,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Closed,summer,low,hf2,8,7.1482397452707565,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Closed,summer,low,pc900,2,6.664685232061934,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Closed,winter,high,hf2,0,7.581754447305312,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Closed,winter,high,pc900,76,7.581754447305312,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Closed,winter,low,hf2,2,7.581754447305312,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Closed,winter,low,pc900,0,7.581754447305312,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,spring,high,hf2,0,7.382159659305415,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,spring,high,pc900,31,6.717086129701156,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Open,spring,low,hf2,8,8.047233188909674,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Open,spring,low,pc900,0,7.382159659305415,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,summer,high,hf2,0,6.566598609045355,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,summer,high,pc900,62,6.566598609045355,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Open,summer,low,hf2,2,6.566598609045355,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,summer,low,pc900,0,6.566598609045355,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,winter,high,hf2,0,8.34082153194592,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,winter,high,pc900,52,8.34082153194592,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Forested_Open-Open,winter,low,hf2,2,8.34082153194592,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Forested_Open-Open,winter,low,pc900,0,8.34082153194592,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,spring,high,hf2,0,11.600449786947447,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,spring,high,pc900,18,11.600449786947447,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Open_Open,spring,low,hf2,0,11.600449786947447,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,spring,low,pc900,0,11.600449786947447,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,summer,high,hf2,0,11.121313908696969,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,summer,high,pc900,21,11.121313908696969,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Open_Open,summer,low,hf2,0,11.121313908696969,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,summer,low,pc900,0,11.121313908696969,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,winter,high,hf2,0,16.362355904237756,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,winter,high,pc900,15,16.362355904237756,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Open_Open,winter,low,hf2,0,16.362355904237756,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Open_Open,winter,low,pc900,0,16.362355904237756,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Closed,spring,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Closed,spring,high,pc900,4,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Closed,spring,low,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Closed,spring,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Closed,summer,high,hf2,0,5.127134107564439,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Closed,summer,high,pc900,16,5.127134107564439,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Shrubby_Closed,summer,low,hf2,0,5.127134107564439,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Closed,summer,low,pc900,0,5.127134107564439,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Closed,winter,high,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Closed,winter,high,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Closed,winter,low,hf2,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Closed,winter,low,pc900,0,NA,FALSE,TRUE,FALSE,TRUE,NA
-Wolf,Shrubby_Open,spring,high,hf2,0,8.618726486324176,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,spring,high,pc900,37,8.618726486324176,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Shrubby_Open,spring,low,hf2,0,8.618726486324176,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,spring,low,pc900,0,8.618726486324176,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,summer,high,hf2,0,8.329813333634501,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,summer,high,pc900,9,8.329813333634501,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Shrubby_Open,summer,low,hf2,0,8.329813333634501,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,summer,low,pc900,3,8.329813333634501,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,winter,high,hf2,0,11.583319545184024,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,winter,high,pc900,39,11.583319545184024,FALSE,TRUE,FALSE,FALSE,NA
-Wolf,Shrubby_Open,winter,low,hf2,0,11.583319545184024,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
-Wolf,Shrubby_Open,winter,low,pc900,0,11.583319545184024,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+dist_group,overall_category,season,height,model,n,row_id,edd,preserve_height,preserve_season,preserve_model,edd_filled,fill_level
+Bear,Forested_Closed-Closed,spring,high,hf2,0,1,5.098423723114789,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Closed-Closed,spring,high,pc900,13,2,5.1225314239342294,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Closed-Closed,spring,low,hf2,4,3,5.098423723114789,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Closed-Closed,spring,low,pc900,0,4,5.098423723114789,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Closed-Closed,summer,high,hf2,6,5,5.089636286002138,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Closed-Closed,summer,high,pc900,107,6,5.1002672960928725,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Closed-Closed,summer,low,hf2,32,7,5.075692633992241,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Closed-Closed,summer,low,pc900,6,8,5.084683550847486,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Closed-Closed,winter,high,hf2,0,9,5.098423723114789,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Closed-Closed,winter,high,pc900,9,10,5.117731147819765,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Closed-Closed,winter,low,hf2,0,11,5.098423723114789,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Closed-Closed,winter,low,pc900,0,12,5.098423723114789,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Closed,spring,high,hf2,0,13,5.582599974670388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Closed,spring,high,pc900,36,14,5.7244277337853555,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Closed,spring,low,hf2,10,15,5.554337884546597,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Closed,spring,low,pc900,0,16,5.582599974670388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Closed,summer,high,hf2,14,17,5.537589372797864,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Closed,summer,high,pc900,144,18,5.598521123271744,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Closed,summer,low,hf2,34,19,5.45683649705018,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Closed,summer,low,pc900,12,20,5.5090164798787615,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Closed,winter,high,hf2,1,21,5.582599974670388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Closed,winter,high,pc900,6,22,5.697470731362212,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Closed,winter,low,hf2,0,23,5.582599974670388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Closed,winter,low,pc900,1,24,5.582599974670388,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Open,spring,high,hf2,5,25,6.126585925753999,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,spring,high,pc900,41,26,6.247920232154574,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,spring,low,hf2,11,27,5.9641006958005685,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,spring,low,pc900,0,28,6.03208906343325,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Open,summer,high,hf2,23,29,5.935895685425015,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,summer,high,pc900,320,30,6.038277193061362,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,summer,low,hf2,14,31,5.799206697521925,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,summer,low,pc900,23,32,5.887664864893455,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,winter,high,hf2,5,33,6.085907644302972,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,winter,high,pc900,10,34,6.20324263198538,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Forested_Open-Open,winter,low,hf2,0,35,6.03208906343325,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Forested_Open-Open,winter,low,pc900,0,36,6.03208906343325,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,spring,high,hf2,0,37,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,spring,high,pc900,13,38,8.4548313246759,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Open_Open,spring,low,hf2,0,39,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,spring,low,pc900,0,40,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,summer,high,hf2,4,41,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,summer,high,pc900,72,42,7.934372801827259,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Open_Open,summer,low,hf2,0,43,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,summer,low,pc900,0,44,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,winter,high,hf2,0,45,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,winter,high,pc900,0,46,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,winter,low,hf2,0,47,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Open_Open,winter,low,pc900,0,48,8.19460206325158,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,spring,high,hf2,0,49,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,spring,high,pc900,4,50,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,spring,low,hf2,0,51,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,spring,low,pc900,0,52,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,summer,high,hf2,10,53,5.5344691684990694,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Shrubby_Closed,summer,high,pc900,54,54,5.595065113507167,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Shrubby_Closed,summer,low,hf2,8,55,5.454166468564762,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Shrubby_Closed,summer,low,pc900,8,56,5.506054882210276,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Shrubby_Closed,winter,high,hf2,0,57,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,winter,high,pc900,0,58,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,winter,low,hf2,0,59,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Closed,winter,low,pc900,0,60,5.522438908195319,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,spring,high,hf2,0,61,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,spring,high,pc900,4,62,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,spring,low,hf2,0,63,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,spring,low,pc900,0,64,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,summer,high,hf2,11,65,6.353696460998284,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Shrubby_Open,summer,high,pc900,128,66,6.496954396741083,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Shrubby_Open,summer,low,hf2,0,67,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,summer,low,pc900,41,68,6.285945583564646,FALSE,FALSE,FALSE,FALSE,NA
+Bear,Shrubby_Open,winter,high,hf2,0,69,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,winter,high,pc900,0,70,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,winter,low,hf2,0,71,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Bear,Shrubby_Open,winter,low,pc900,0,72,6.378865480434671,FALSE,FALSE,FALSE,TRUE,filled_within overall_category
+Coyote,Forested_Closed-Closed,spring,high,hf2,0,73,6.208687267288284,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Closed-Closed,spring,high,pc900,8,74,6.208687267288284,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,spring,low,hf2,7,75,5.724104064716202,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,spring,low,pc900,0,76,5.724104064716202,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Closed-Closed,summer,high,hf2,6,77,6.036173743360091,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,summer,high,pc900,12,78,6.060129826206774,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,summer,low,hf2,9,79,5.632110634474327,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,summer,low,pc900,1,80,5.632110634474327,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Closed-Closed,winter,high,hf2,9,81,6.1989359870629706,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,winter,high,pc900,8,82,6.226319225759879,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,winter,low,hf2,20,83,5.735071031319135,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Closed-Closed,winter,low,pc900,1,84,5.735071031319135,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Closed,spring,high,hf2,0,85,5.573132577174021,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Closed,spring,high,pc900,17,86,5.573132577174021,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Closed,spring,low,hf2,16,87,5.336045186588135,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Closed,spring,low,pc900,1,88,5.336045186588135,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Closed,summer,high,hf2,2,89,5.4995057542456,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Closed,summer,high,pc900,39,90,5.4995057542456,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Closed,summer,low,hf2,18,91,5.292078485409455,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Closed,summer,low,pc900,5,92,5.299270801046271,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Closed,winter,high,hf2,0,93,5.5819241152668075,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Closed,winter,high,pc900,27,94,5.5819241152668075,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Closed,winter,low,hf2,11,95,5.341309797360264,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Closed,winter,low,pc900,3,96,5.341309797360264,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Open,spring,high,hf2,1,97,7.1853364081972995,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Open,spring,high,pc900,14,98,7.1853364081972995,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Open,spring,low,hf2,8,99,6.345338781871913,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Open,spring,low,pc900,4,100,6.345338781871913,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Open,summer,high,hf2,9,101,6.890355173065993,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Open,summer,high,pc900,52,102,6.931563716973355,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Open,summer,low,hf2,22,103,6.1814161370664324,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Open,summer,low,pc900,2,104,6.1814161370664324,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Open,winter,high,hf2,6,105,7.168768745763009,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Open,winter,high,pc900,84,106,7.2152627157787315,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Forested_Open-Open,winter,low,hf2,3,107,6.395575277932696,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Forested_Open-Open,winter,low,pc900,7,108,6.395575277932696,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,spring,high,hf2,7,109,14.173185112698954,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,spring,high,pc900,164,110,14.32955215621107,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,spring,low,hf2,0,111,11.444864185388347,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Open_Open,spring,low,pc900,8,112,11.444864185388347,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,summer,high,hf2,31,113,13.312311825017696,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,summer,high,pc900,508,114,13.456408765170362,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,summer,low,hf2,0,115,12.990457004996165,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Open_Open,summer,low,pc900,4,116,12.990457004996165,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Open_Open,winter,high,hf2,8,117,14.273246036036083,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,winter,high,pc900,403,118,14.431028034177972,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Open_Open,winter,low,hf2,0,119,11.519554874936409,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Open_Open,winter,low,pc900,24,120,11.519554874936409,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Closed,spring,high,hf2,0,121,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Closed,spring,high,pc900,4,122,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Closed,spring,low,hf2,0,123,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Closed,spring,low,pc900,0,124,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Closed,summer,high,hf2,42,125,6.055975624175413,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Closed,summer,high,pc900,13,126,6.080352667074604,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Closed,summer,low,hf2,3,127,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Closed,summer,low,pc900,4,128,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Closed,winter,high,hf2,47,129,6.221571599384898,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Closed,winter,high,pc900,25,130,6.2494256781402395,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Closed,winter,low,hf2,1,131,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Closed,winter,low,pc900,0,132,6.151831392193788,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Open,spring,high,hf2,0,133,7.536438521530555,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Shrubby_Open,spring,high,pc900,23,134,7.536438521530555,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Open,spring,low,hf2,0,135,7.180171651910205,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Open,spring,low,pc900,0,136,7.180171651910205,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Open,summer,high,hf2,34,137,7.199993205562828,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Open,summer,high,pc900,71,138,7.247071279724426,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Open,summer,low,hf2,0,139,6.416677026258542,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Coyote,Shrubby_Open,summer,low,pc900,10,140,6.416677026258542,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Open,winter,high,hf2,16,141,7.517574783528449,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Open,winter,high,pc900,84,142,7.57050285088774,TRUE,TRUE,FALSE,FALSE,NA
+Coyote,Shrubby_Open,winter,low,hf2,1,143,7.180171651910205,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Coyote,Shrubby_Open,winter,low,pc900,3,144,7.180171651910205,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Deer,Forested_Closed-Closed,spring,high,hf2,0,145,5.486157717156043,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Closed-Closed,spring,high,pc900,14,146,5.379966217084163,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Closed-Closed,spring,low,hf2,3,147,5.37287572170745,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Closed-Closed,spring,low,pc900,0,148,5.37287572170745,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Closed-Closed,summer,high,hf2,2,149,5.486157717156043,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Closed-Closed,summer,high,pc900,52,150,5.536891353373897,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Closed-Closed,summer,low,hf2,32,151,5.37287572170745,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Closed-Closed,summer,low,pc900,2,152,5.37287572170745,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Closed-Closed,winter,high,hf2,22,153,5.517421540157765,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Closed-Closed,winter,high,pc900,24,154,5.510351758008348,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Closed-Closed,winter,low,hf2,2,155,5.37287572170745,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Closed-Closed,winter,low,pc900,1,156,5.37287572170745,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Closed,spring,high,hf2,0,157,6.205095708522546,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Closed,spring,high,pc900,37,158,5.9419855539540984,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,spring,low,hf2,16,159,5.661007662620927,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,spring,low,pc900,0,160,5.844997413586436,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Closed,summer,high,hf2,12,161,6.324484399856904,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,summer,high,pc900,310,162,6.307473209611767,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,summer,low,hf2,65,163,5.925195514144624,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,summer,low,pc900,6,164,5.912962917260986,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,winter,high,hf2,4,165,6.205095708522546,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Closed,winter,high,pc900,91,166,6.246439670667417,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,winter,low,hf2,12,167,5.880823560319209,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Closed,winter,low,pc900,2,168,5.844997413586436,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Open,spring,high,hf2,1,169,6.945578825969305,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Open,spring,high,pc900,63,170,6.52408978566853,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,spring,low,hf2,14,171,6.083444807691733,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,spring,low,pc900,0,172,6.367800483467327,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Open,summer,high,hf2,49,173,7.11047790448126,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,summer,high,pc900,476,174,7.084682528523041,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,summer,low,hf2,44,175,6.498016554015376,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,summer,low,pc900,25,176,6.479001186668658,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,winter,high,hf2,42,177,7.016714030496517,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,winter,high,pc900,195,178,6.991929880677174,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Forested_Open-Open,winter,low,hf2,2,179,6.367800483467327,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Forested_Open-Open,winter,low,pc900,12,180,6.4107393854935415,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,spring,high,hf2,31,181,7.46397595767711,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,spring,high,pc900,284,182,7.4344439526493895,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,spring,low,hf2,0,183,7.122203264323834,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Open_Open,spring,low,pc900,5,184,6.737929320618907,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,summer,high,hf2,109,185,8.309664348549548,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,summer,high,pc900,1610,186,8.271603945373084,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,summer,low,hf2,0,187,7.122203264323834,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Open_Open,summer,low,pc900,5,188,7.366171969707775,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,winter,high,hf2,33,189,8.171141340780407,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,winter,high,pc900,439,190,8.13444331428038,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Open_Open,winter,low,hf2,0,191,7.122203264323834,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Open_Open,winter,low,pc900,10,192,7.262508502644819,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Closed,spring,high,hf2,0,193,6.325099802330254,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Closed,spring,high,pc900,20,194,6.027921442979503,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Closed,spring,low,hf2,0,195,5.996452128284122,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Closed,spring,low,pc900,0,196,5.996452128284122,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Closed,summer,high,hf2,22,197,6.441738445098165,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Closed,summer,high,pc900,144,198,6.4233686138655655,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Closed,summer,low,hf2,0,199,5.996452128284122,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Closed,summer,low,pc900,7,200,5.996452128284122,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Closed,winter,high,hf2,79,201,6.375034873491461,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Closed,winter,high,pc900,23,202,6.3574356362165725,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Closed,winter,low,hf2,1,203,5.996452128284122,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Closed,winter,low,pc900,1,204,5.996452128284122,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Open,spring,high,hf2,0,205,7.7283757227697345,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Open,spring,high,pc900,50,206,7.159324475030267,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Open,spring,low,hf2,0,207,7.05121609937418,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Open,spring,low,pc900,1,208,7.05121609937418,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Open,summer,high,hf2,24,209,7.950334593444942,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Open,summer,high,pc900,371,210,7.915834501048367,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Open,summer,low,hf2,0,211,7.05121609937418,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Open,summer,low,pc900,42,212,7.097850679766532,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Open,winter,high,hf2,40,213,7.824810179022153,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Open,winter,high,pc900,104,214,7.791574865302943,TRUE,FALSE,FALSE,FALSE,NA
+Deer,Shrubby_Open,winter,low,hf2,0,215,7.05121609937418,TRUE,FALSE,FALSE,TRUE,filled_within overall_category_height
+Deer,Shrubby_Open,winter,low,pc900,21,216,7.004581518981829,TRUE,FALSE,FALSE,FALSE,NA
+Hare,Forested_Closed-Closed,spring,high,hf2,3,217,5.19093655439693,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Closed-Closed,spring,high,pc900,34,218,5.134504386954647,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Closed-Closed,spring,low,hf2,2,219,5.19093655439693,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Closed-Closed,spring,low,pc900,0,220,5.19093655439693,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Closed-Closed,summer,high,hf2,16,221,5.349527239747134,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Closed-Closed,summer,high,pc900,49,222,5.124920878482962,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Closed-Closed,summer,low,hf2,5,223,5.08350968660619,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Closed-Closed,summer,low,pc900,0,224,5.19093655439693,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Closed-Closed,winter,high,hf2,162,225,5.402962781288886,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Closed-Closed,winter,high,pc900,269,226,5.144483144097244,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Closed-Closed,winter,low,hf2,33,227,5.096647763601447,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Closed-Closed,winter,low,pc900,1,228,5.19093655439693,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Open-Closed,spring,high,hf2,0,229,5.292892859984084,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Open-Closed,spring,high,pc900,100,230,5.266889908943039,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,spring,low,hf2,5,231,5.179216752097094,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,spring,low,pc900,0,232,5.292892859984084,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Open-Closed,summer,high,hf2,9,233,5.68081518413372,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,summer,high,pc900,161,234,5.248093665599,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,summer,low,hf2,15,235,5.166498100839666,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,summer,low,pc900,6,236,5.058838010874623,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,winter,high,hf2,15,237,5.781577024917067,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,winter,high,pc900,548,238,5.286427449305193,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,winter,low,hf2,65,239,5.192452002263737,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Closed,winter,low,pc900,7,240,5.0681205008677015,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,spring,high,hf2,0,241,5.591372889745521,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Open-Open,spring,high,pc900,117,242,5.456306130938933,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,spring,low,hf2,8,243,5.30815936839645,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,spring,low,pc900,0,244,5.591372889745521,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Open-Open,summer,high,hf2,9,245,6.13692513585858,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,summer,high,pc900,104,246,5.4246778913491305,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,summer,low,hf2,25,247,5.286533341756844,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,summer,low,pc900,1,248,5.591372889745521,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Forested_Open-Open,winter,high,hf2,12,249,6.298647140687651,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,winter,high,pc900,490,250,5.489107369926954,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,winter,low,hf2,49,251,5.330626739049621,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Forested_Open-Open,winter,low,pc900,1,252,5.591372889745521,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,spring,high,hf2,1,253,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,spring,high,pc900,143,254,5.808418127861352,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Open_Open,spring,low,hf2,0,255,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,spring,low,pc900,0,256,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,summer,high,hf2,0,257,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,summer,high,pc900,228,258,5.753909971809304,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Open_Open,summer,low,hf2,0,259,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,summer,low,pc900,0,260,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,winter,high,hf2,1,261,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,winter,high,pc900,453,262,5.864742653307191,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Open_Open,winter,low,hf2,0,263,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Open_Open,winter,low,pc900,0,264,5.809023584325949,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,spring,high,hf2,0,265,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,spring,high,pc900,12,266,5.345904802362884,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Closed,spring,low,hf2,0,267,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,spring,low,pc900,0,268,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,summer,high,hf2,0,269,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,summer,high,pc900,5,270,5.321707528282869,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Closed,summer,low,hf2,4,271,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,summer,low,pc900,2,272,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,winter,high,hf2,14,273,6.000454741110658,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Closed,winter,high,pc900,96,274,5.3710318944897555,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Closed,winter,low,hf2,1,275,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Closed,winter,low,pc900,0,276,5.509774741561541,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Open,spring,high,hf2,0,277,5.526094499868103,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Open,spring,high,pc900,24,278,5.499836152660587,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Open,spring,low,hf2,0,279,5.526094499868103,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Open,spring,low,pc900,0,280,5.526094499868103,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Open,summer,high,hf2,0,281,5.526094499868103,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Open,summer,high,pc900,52,282,5.465313494902683,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Open,summer,low,hf2,0,283,5.526094499868103,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Open,summer,low,pc900,26,284,5.1120994783259,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Open,winter,high,hf2,12,285,6.41401716501326,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Open,winter,high,pc900,89,286,5.535621699549678,TRUE,TRUE,TRUE,FALSE,NA
+Hare,Shrubby_Open,winter,low,hf2,4,287,5.526094499868103,TRUE,TRUE,TRUE,TRUE,filled_within_overall_category
+Hare,Shrubby_Open,winter,low,pc900,11,288,5.129679008756507,TRUE,TRUE,TRUE,FALSE,NA
+LargeUngulates,Forested_Closed-Closed,spring,high,hf2,0,289,5.329089520301032,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Forested_Closed-Closed,spring,high,pc900,12,290,5.329089520301032,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Closed-Closed,spring,low,hf2,3,291,5.218578239682327,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Closed-Closed,spring,low,pc900,0,292,5.218578239682327,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Closed-Closed,summer,high,hf2,10,293,5.286279785591493,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Closed-Closed,summer,high,pc900,131,294,5.187104462394962,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Closed-Closed,summer,low,hf2,47,295,5.15434998801806,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Closed-Closed,summer,low,pc900,1,296,5.15434998801806,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Forested_Closed-Closed,winter,high,hf2,2,297,5.154181326416991,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Forested_Closed-Closed,winter,high,pc900,20,298,5.154181326416991,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Closed-Closed,winter,low,hf2,3,299,5.218578239682327,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Closed-Closed,winter,low,pc900,0,300,5.218578239682327,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Open-Closed,spring,high,hf2,2,301,6.0320885799818145,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Forested_Open-Closed,spring,high,pc900,63,302,6.0320885799818145,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Closed,spring,low,hf2,1,303,5.608467038516085,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Open-Closed,spring,low,pc900,2,304,5.608467038516085,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Open-Closed,summer,high,hf2,9,305,5.904564057105325,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Closed,summer,high,pc900,346,306,5.602195775405072,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Closed,summer,low,hf2,53,307,5.499997850058208,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Closed,summer,low,pc900,53,308,5.328991968720548,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Closed,winter,high,hf2,4,309,5.499468381687608,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Forested_Open-Closed,winter,high,pc900,223,310,5.499468381687608,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Closed,winter,low,hf2,5,311,5.414074470429426,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Closed,winter,low,pc900,9,312,5.271732340103425,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,spring,high,hf2,4,313,8.267034614486636,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Forested_Open-Open,spring,high,pc900,92,314,8.267034614486636,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,spring,low,hf2,0,315,7.091327784889648,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Open-Open,spring,low,pc900,1,316,7.091327784889648,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Forested_Open-Open,summer,high,hf2,43,317,7.908804299413185,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,summer,high,pc900,620,318,7.021715191043049,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,summer,low,hf2,15,319,6.707106661777351,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,summer,low,pc900,37,320,6.159211334150653,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,winter,high,hf2,9,321,7.472749426034142,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,winter,high,pc900,212,322,6.705453738001627,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,winter,low,hf2,10,323,6.435481393783697,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Forested_Open-Open,winter,low,pc900,7,324,5.968686575719504,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Open_Open,spring,high,hf2,0,325,11.698797734656514,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Open_Open,spring,high,pc900,76,326,11.698797734656514,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Open_Open,spring,low,hf2,0,327,10.463298960994297,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Open_Open,spring,low,pc900,0,328,10.463298960994297,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Open_Open,summer,high,hf2,33,329,11.041148707672274,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Open_Open,summer,high,pc900,413,330,9.366164121565616,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Open_Open,summer,low,hf2,0,331,10.463298960994297,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Open_Open,summer,low,pc900,0,332,10.463298960994297,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Open_Open,winter,high,hf2,6,333,10.227268180278557,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Open_Open,winter,high,pc900,91,334,8.747617287136311,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Open_Open,winter,low,hf2,0,335,10.463298960994297,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Open_Open,winter,low,pc900,3,336,10.463298960994297,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Shrubby_Closed,spring,high,hf2,0,337,6.3986276059767775,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Shrubby_Closed,spring,high,pc900,56,338,6.3986276059767775,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Closed,spring,low,hf2,0,339,5.9425011430167585,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Shrubby_Closed,spring,low,pc900,0,340,5.9425011430167585,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Shrubby_Closed,summer,high,hf2,4,341,5.825762183519323,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Shrubby_Closed,summer,high,pc900,161,342,5.825762183519323,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Closed,summer,low,hf2,19,343,5.687780367952118,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Closed,summer,low,pc900,2,344,5.687780367952118,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Shrubby_Closed,winter,high,hf2,18,345,6.028605340745128,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Closed,winter,high,pc900,59,346,5.687063488492504,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Closed,winter,low,hf2,4,347,5.9425011430167585,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Shrubby_Closed,winter,low,pc900,2,348,5.9425011430167585,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Shrubby_Open,spring,high,hf2,0,349,8.516199904452202,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Shrubby_Open,spring,high,pc900,36,350,8.516199904452202,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Open,spring,low,hf2,0,351,7.0550046415770655,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Shrubby_Open,spring,low,pc900,0,352,7.0550046415770655,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+LargeUngulates,Shrubby_Open,summer,high,hf2,3,353,7.186749734980215,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Shrubby_Open,summer,high,pc900,219,354,7.186749734980215,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Open,summer,low,hf2,0,355,6.2597071436213225,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Shrubby_Open,summer,low,pc900,26,356,6.2597071436213225,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Open,winter,high,hf2,35,357,7.669263787362201,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Open,winter,high,pc900,83,358,6.847564763282422,TRUE,TRUE,FALSE,FALSE,NA
+LargeUngulates,Shrubby_Open,winter,low,hf2,1,359,6.053952149509275,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+LargeUngulates,Shrubby_Open,winter,low,pc900,7,360,6.053952149509275,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Closed-Closed,spring,high,hf2,0,361,5.131235595029186,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Closed-Closed,spring,high,pc900,20,362,5.131235595029186,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Closed-Closed,spring,low,hf2,4,363,5.057060089217113,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Forested_Closed-Closed,spring,low,pc900,0,364,5.057060089217113,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Forested_Closed-Closed,summer,high,hf2,0,365,5.028387421270689,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Closed-Closed,summer,high,pc900,17,366,5.028387421270689,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Closed-Closed,summer,low,hf2,7,367,5.005147057542258,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Closed-Closed,summer,low,pc900,2,368,5.005147057542258,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Closed-Closed,winter,high,hf2,0,369,5.10193710671968,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Closed-Closed,winter,high,pc900,172,370,5.10193710671968,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Closed-Closed,winter,low,hf2,13,371,5.018593265523751,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Closed-Closed,winter,low,pc900,1,372,5.018593265523751,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Closed,spring,high,hf2,0,373,5.712093314648164,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Closed,spring,high,pc900,37,374,5.712093314648164,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Closed,spring,low,hf2,8,375,5.136133307336518,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Closed,spring,low,pc900,0,376,5.136133307336518,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Closed,summer,high,hf2,0,377,5.160741799947541,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Closed,summer,high,pc900,86,378,5.160741799947541,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Closed,summer,low,hf2,13,379,5.029457930634544,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Closed,summer,low,pc900,4,380,5.029457930634544,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Closed,winter,high,hf2,0,381,5.559488639097033,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Closed,winter,high,pc900,370,382,5.559488639097033,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Closed,winter,low,hf2,57,383,5.105752575305888,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Closed,winter,low,pc900,9,384,5.370764588978872,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Open,spring,high,hf2,0,385,7.660468724778969,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Open,spring,high,pc900,43,386,7.660468724778969,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Open,spring,low,hf2,1,387,6.483772114414295,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Forested_Open-Open,spring,low,pc900,0,388,6.483772114414295,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Forested_Open-Open,summer,high,hf2,0,389,5.675554640788573,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Open,summer,high,pc900,53,390,5.675554640788573,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Open,summer,low,hf2,2,391,6.483772114414295,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Forested_Open-Open,summer,low,pc900,1,392,6.483772114414295,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Forested_Open-Open,winter,high,hf2,0,393,7.147545239525589,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Forested_Open-Open,winter,high,pc900,232,394,7.147545239525589,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Open,winter,low,hf2,13,395,5.451519852564048,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Forested_Open-Open,winter,low,pc900,4,396,5.451519852564048,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Open_Open,spring,high,hf2,0,397,10.01762413611827,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Open_Open,spring,high,pc900,8,398,10.01762413611827,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Open_Open,spring,low,hf2,0,399,8.520475144280649,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Open_Open,spring,low,pc900,0,400,8.520475144280649,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Open_Open,summer,high,hf2,0,401,6.4135801852026235,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Open_Open,summer,high,pc900,7,402,6.4135801852026235,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Open_Open,summer,low,hf2,0,403,8.520475144280649,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Open_Open,summer,low,pc900,0,404,8.520475144280649,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Open_Open,winter,high,hf2,0,405,9.130221111521053,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Open_Open,winter,high,pc900,26,406,9.130221111521053,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Open_Open,winter,low,hf2,0,407,8.520475144280649,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Open_Open,winter,low,pc900,0,408,8.520475144280649,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Closed,spring,high,hf2,0,409,5.913647625063618,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Shrubby_Closed,spring,high,pc900,5,410,5.913647625063618,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Shrubby_Closed,spring,low,hf2,0,411,5.4950561259545,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Closed,spring,low,pc900,0,412,5.4950561259545,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Closed,summer,high,hf2,0,413,5.209123663953681,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Shrubby_Closed,summer,high,pc900,16,414,5.209123663953681,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Shrubby_Closed,summer,low,hf2,0,415,5.137073628238313,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Shrubby_Closed,summer,low,pc900,5,416,5.137073628238313,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Shrubby_Closed,winter,high,hf2,0,417,5.720379586562387,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Shrubby_Closed,winter,high,pc900,52,418,5.720379586562387,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Shrubby_Closed,winter,low,hf2,1,419,5.4950561259545,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Closed,winter,low,pc900,0,420,5.4950561259545,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Open,spring,high,hf2,0,421,9.236300792711933,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Shrubby_Open,spring,high,pc900,10,422,9.236300792711933,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Shrubby_Open,spring,low,hf2,0,423,7.953936711973551,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Open,spring,low,pc900,0,424,7.953936711973551,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Open,summer,high,hf2,0,425,6.157352797004655,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Shrubby_Open,summer,high,pc900,9,426,6.157352797004655,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Shrubby_Open,summer,low,hf2,0,427,7.953936711973551,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Open,summer,low,pc900,4,428,7.953936711973551,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Open,winter,high,hf2,0,429,8.468156546204064,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+Lynx,Shrubby_Open,winter,high,pc900,51,430,8.468156546204064,TRUE,TRUE,FALSE,FALSE,NA
+Lynx,Shrubby_Open,winter,low,hf2,0,431,7.953936711973551,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+Lynx,Shrubby_Open,winter,low,pc900,1,432,7.953936711973551,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,spring,high,hf2,0,433,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,spring,high,pc900,0,434,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,spring,low,hf2,0,435,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,spring,low,pc900,0,436,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,summer,high,hf2,0,437,8.430073825646412,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Forested_Closed-Closed,summer,high,pc900,5,438,8.430073825646412,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Forested_Closed-Closed,summer,low,hf2,0,439,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,summer,low,pc900,0,440,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,winter,high,hf2,0,441,9.178923414998925,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Forested_Closed-Closed,winter,high,pc900,14,442,9.178923414998925,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Forested_Closed-Closed,winter,low,hf2,0,443,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Closed-Closed,winter,low,pc900,0,444,8.8044986203226685,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,spring,high,hf2,0,445,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,spring,high,pc900,0,446,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,spring,low,hf2,0,447,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,spring,low,pc900,0,448,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,summer,high,hf2,0,449,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Forested_Open-Closed,summer,high,pc900,10,450,6.9240046108026885,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Forested_Open-Closed,summer,low,hf2,0,451,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,summer,low,pc900,0,452,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,winter,high,hf2,0,453,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,winter,high,pc900,4,454,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,winter,low,hf2,0,455,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Closed,winter,low,pc900,0,456,6.9240046108026885,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Open,spring,high,hf2,0,457,6.742532373479049,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Forested_Open-Open,spring,high,pc900,6,458,6.742532373479049,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Forested_Open-Open,spring,low,hf2,12,459,6.043652566389837,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Forested_Open-Open,spring,low,pc900,0,460,6.043652566389837,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Forested_Open-Open,summer,high,hf2,0,461,7.096526488313949,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Forested_Open-Open,summer,high,pc900,15,462,7.096526488313949,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Forested_Open-Open,summer,low,hf2,1,463,6.86837738975244,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Open,summer,low,pc900,0,464,6.86837738975244,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Open,winter,high,hf2,0,465,7.590798130826923,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Forested_Open-Open,winter,high,pc900,21,466,7.590798130826923,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Forested_Open-Open,winter,low,hf2,0,467,6.86837738975244,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Forested_Open-Open,winter,low,pc900,0,468,6.86837738975244,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Open_Open,spring,high,hf2,0,469,10.894602876240572,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Open_Open,spring,high,pc900,22,470,10.894602876240572,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Open_Open,spring,low,hf2,0,471,11.99296714211108,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Open_Open,spring,low,pc900,0,472,11.99296714211108,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Open_Open,summer,high,hf2,0,473,11.879569700752485,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Open_Open,summer,high,pc900,33,474,11.879569700752485,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Open_Open,summer,low,hf2,0,475,11.99296714211108,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Open_Open,summer,low,pc900,0,476,11.99296714211108,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Open_Open,winter,high,hf2,0,477,13.204728849340182,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Open_Open,winter,high,pc900,134,478,13.204728849340182,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Open_Open,winter,low,hf2,0,479,11.99296714211108,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Open_Open,winter,low,pc900,0,480,11.99296714211108,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,spring,high,hf2,0,481,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,spring,high,pc900,0,482,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,spring,low,hf2,0,483,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,spring,low,pc900,0,484,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,summer,high,hf2,0,485,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,summer,high,pc900,1,486,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,summer,low,hf2,0,487,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,summer,low,pc900,0,488,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,winter,high,hf2,0,489,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Shrubby_Closed,winter,high,pc900,5,490,6.358466165393895,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Shrubby_Closed,winter,low,hf2,0,491,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Closed,winter,low,pc900,0,492,6.358466165393895,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Open,spring,high,hf2,0,493,6.041462962957042,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Shrubby_Open,spring,high,pc900,13,494,6.041462962957042,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Shrubby_Open,spring,low,hf2,0,495,6.296452949854638,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Open,spring,low,pc900,0,496,6.296452949854638,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Open,summer,high,hf2,0,497,6.265175834678977,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Shrubby_Open,summer,high,pc900,18,498,6.265175834678977,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Shrubby_Open,summer,low,hf2,0,499,6.296452949854638,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Open,summer,low,pc900,0,500,6.296452949854638,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Open,winter,high,hf2,0,501,6.582720051927894,TRUE,TRUE,FALSE,TRUE,filled_within overall_category_season_height
+RedFox,Shrubby_Open,winter,high,pc900,41,502,6.582720051927894,TRUE,TRUE,FALSE,FALSE,NA
+RedFox,Shrubby_Open,winter,low,hf2,0,503,6.296452949854638,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+RedFox,Shrubby_Open,winter,low,pc900,0,504,6.296452949854638,TRUE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Forested_Closed-Closed,spring,high,hf2,0,505,5.281400941153783,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Closed-Closed,spring,high,pc900,10,506,5.281400941153783,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Closed-Closed,spring,low,hf2,3,507,5.281400941153783,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Closed-Closed,spring,low,pc900,0,508,5.281400941153783,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Closed-Closed,summer,high,hf2,0,509,5.179504030807047,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Closed-Closed,summer,high,pc900,6,510,5.179504030807047,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Closed-Closed,summer,low,hf2,1,511,5.179504030807047,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Closed-Closed,summer,low,pc900,0,512,5.179504030807047,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Closed-Closed,winter,high,hf2,0,513,5.150743102454986,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Closed-Closed,winter,high,pc900,58,514,5.175314259066533,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Closed-Closed,winter,low,hf2,16,515,5.126171945843439,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Closed-Closed,winter,low,pc900,0,516,5.150743102454986,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Closed,spring,high,hf2,0,517,5.33026419884403,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Closed,spring,high,pc900,17,518,5.383226883838463,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Closed,spring,low,hf2,6,519,5.277301513849596,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Closed,spring,low,pc900,0,520,5.33026419884403,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Closed,summer,high,hf2,0,521,5.15631743955259,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Closed,summer,high,pc900,36,522,5.245293968891506,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Closed,summer,low,hf2,10,523,5.176864363260066,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Closed,summer,low,pc900,9,524,5.046793986506199,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Closed,winter,high,hf2,0,525,5.206169142775779,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Closed,winter,high,pc900,97,526,5.239603092602745,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Closed,winter,low,hf2,117,527,5.172735192948813,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Closed,winter,low,pc900,1,528,5.206169142775779,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Open,spring,high,hf2,0,529,5.551221228210442,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Open,spring,high,pc900,13,530,5.637955430339692,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Open,spring,low,hf2,14,531,5.4644870260811915,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Open,spring,low,pc900,0,532,5.551221228210442,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Open,summer,high,hf2,0,533,5.245610527888632,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Open,summer,high,pc900,38,534,5.411671708522623,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Open,summer,low,hf2,3,535,5.245610527888632,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Open,summer,low,pc900,8,536,5.07954934725464,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Open,winter,high,hf2,0,537,5.257050018971925,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Forested_Open-Open,winter,high,pc900,104,538,5.402261053696762,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Open,winter,low,hf2,77,539,5.291213936993232,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Forested_Open-Open,winter,low,pc900,8,540,5.0776750662257815,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Open_Open,spring,high,hf2,0,541,5.490507377304127,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,spring,high,pc900,38,542,5.490507377304127,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Open_Open,spring,low,hf2,0,543,5.490507377304127,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,spring,low,pc900,0,544,5.490507377304127,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,summer,high,hf2,0,545,5.315059994859088,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,summer,high,pc900,86,546,5.315059994859088,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Open_Open,summer,low,hf2,0,547,5.315059994859088,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,summer,low,pc900,0,548,5.315059994859088,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,winter,high,hf2,0,549,5.3077963310755205,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,winter,high,pc900,84,550,5.3077963310755205,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Open_Open,winter,low,hf2,0,551,5.3077963310755205,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Open_Open,winter,low,pc900,0,552,5.3077963310755205,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Closed,spring,high,hf2,0,553,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Closed,spring,high,pc900,0,554,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Closed,spring,low,hf2,0,555,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Closed,spring,low,pc900,0,556,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Closed,summer,high,hf2,0,557,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Closed,summer,high,pc900,1,558,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Closed,summer,low,hf2,0,559,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Closed,summer,low,pc900,5,560,5.09667828492646,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Shrubby_Closed,winter,high,hf2,0,561,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Closed,winter,high,pc900,4,562,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Closed,winter,low,hf2,2,563,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Closed,winter,low,pc900,0,564,5.09667828492646,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Open,spring,high,hf2,0,565,5.85019725796899,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Open,spring,high,pc900,3,566,5.85019725796899,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Open,spring,low,hf2,0,567,5.85019725796899,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Open,spring,low,pc900,0,568,5.85019725796899,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+SmallCarnivores,Shrubby_Open,summer,high,hf2,0,569,5.859669430707355,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Open,summer,high,pc900,11,570,5.859669430707355,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Shrubby_Open,summer,low,hf2,2,571,5.859669430707355,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Open,summer,low,pc900,4,572,5.859669430707355,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Open,winter,high,hf2,0,573,5.840725085230625,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Open,winter,high,pc900,28,574,5.840725085230625,FALSE,TRUE,FALSE,FALSE,NA
+SmallCarnivores,Shrubby_Open,winter,low,hf2,0,575,5.840725085230625,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+SmallCarnivores,Shrubby_Open,winter,low,pc900,1,576,5.840725085230625,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,spring,high,hf2,0,577,5.000001888466302,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,spring,high,pc900,9,578,5.000001888466302,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Closed-Closed,spring,low,hf2,0,579,5.000001888466302,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,spring,low,pc900,0,580,5.000001888466302,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,summer,high,hf2,0,581,5.000122747623357,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,summer,high,pc900,9,582,5.000122747623357,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Closed-Closed,summer,low,hf2,0,583,5.000122747623357,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,summer,low,pc900,0,584,5.000122747623357,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,winter,high,hf2,0,585,5.00025316125078,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,winter,high,pc900,12,586,5.00025316125078,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Closed-Closed,winter,low,hf2,0,587,5.00025316125078,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Closed-Closed,winter,low,pc900,0,588,5.00025316125078,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,spring,high,hf2,0,589,5.000004791995885,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,spring,high,pc900,11,590,5.000004791995885,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Open-Closed,spring,low,hf2,0,591,5.000004791995885,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,spring,low,pc900,0,592,5.000004791995885,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,summer,high,hf2,0,593,5.000311467128713,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,summer,high,pc900,21,594,5.000311467128713,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Open-Closed,summer,low,hf2,0,595,5.000311467128713,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,summer,low,pc900,0,596,5.000311467128713,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,winter,high,hf2,0,597,5.897992503235644,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Closed,winter,high,pc900,51,598,5.000642373554232,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Open-Closed,winter,low,hf2,13,599,6.795342632917055,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Open-Closed,winter,low,pc900,0,600,5.897992503235644,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,spring,high,hf2,0,601,5.000005938307971,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,spring,high,pc900,23,602,5.000005938307971,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Open-Open,spring,low,hf2,0,603,5.000005938307971,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,spring,low,pc900,0,604,5.000005938307971,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,summer,high,hf2,0,605,5.000385971567883,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,summer,high,pc900,17,606,5.000385971567883,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Open-Open,summer,low,hf2,0,607,5.000385971567883,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,summer,low,pc900,0,608,5.000385971567883,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,winter,high,hf2,0,609,5.000796026106358,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,winter,high,pc900,54,610,5.000796026106358,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Forested_Open-Open,winter,low,hf2,0,611,5.000796026106358,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Forested_Open-Open,winter,low,pc900,0,612,5.000796026106358,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,spring,high,hf2,0,613,5.000019774553219,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,spring,high,pc900,21,614,5.000019774553219,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Open_Open,spring,low,hf2,0,615,5.000019774553219,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,spring,low,pc900,0,616,5.000019774553219,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,summer,high,hf2,0,617,5.001285170740507,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,summer,high,pc900,146,618,5.001285170740507,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Open_Open,summer,low,hf2,0,619,5.001285170740507,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,summer,low,pc900,0,620,5.001285170740507,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,winter,high,hf2,0,621,5.002650277561064,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,winter,high,pc900,115,622,5.002650277561064,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Open_Open,winter,low,hf2,0,623,5.002650277561064,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Open_Open,winter,low,pc900,0,624,5.002650277561064,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Shrubby_Closed,spring,high,hf2,0,625,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,spring,high,pc900,1,626,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,spring,low,hf2,0,627,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,spring,low,pc900,0,628,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,summer,high,hf2,0,629,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,summer,high,pc900,0,630,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,summer,low,hf2,0,631,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,summer,low,pc900,0,632,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,winter,high,hf2,0,633,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,winter,high,pc900,1,634,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,winter,low,hf2,0,635,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Closed,winter,low,pc900,0,636,5.060944415293688,FALSE,TRUE,FALSE,TRUE,filled_within_dist_group
+Squirrels,Shrubby_Open,spring,high,hf2,0,637,5.003445503622548,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Squirrels,Shrubby_Open,spring,high,pc900,2,638,5.003445503622548,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Squirrels,Shrubby_Open,spring,low,hf2,0,639,5.003445503622548,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Squirrels,Shrubby_Open,spring,low,pc900,0,640,5.003445503622548,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Squirrels,Shrubby_Open,summer,high,hf2,0,641,5.0022505013758725,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Shrubby_Open,summer,high,pc900,36,642,5.0022505013758725,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Shrubby_Open,summer,low,hf2,0,643,5.0022505013758725,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Shrubby_Open,summer,low,pc900,0,644,5.0022505013758725,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Shrubby_Open,winter,high,hf2,0,645,5.004640505869224,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Shrubby_Open,winter,high,pc900,12,646,5.004640505869224,FALSE,TRUE,FALSE,FALSE,NA
+Squirrels,Shrubby_Open,winter,low,hf2,0,647,5.004640505869224,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Squirrels,Shrubby_Open,winter,low,pc900,0,648,5.004640505869224,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Closed-Closed,spring,high,hf2,0,649,5.064155577634168,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Forested_Closed-Closed,spring,high,pc900,1,650,5.064155577634168,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Forested_Closed-Closed,spring,low,hf2,1,651,5.064155577634168,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Forested_Closed-Closed,spring,low,pc900,0,652,5.064155577634168,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Forested_Closed-Closed,summer,high,hf2,0,653,5.01860343446906,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Closed-Closed,summer,high,pc900,6,654,5.01860343446906,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Closed-Closed,summer,low,hf2,2,655,5.01860343446906,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Closed-Closed,summer,low,pc900,0,656,5.01860343446906,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Closed-Closed,winter,high,hf2,0,657,5.109707720799276,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Closed-Closed,winter,high,pc900,28,658,5.109707720799276,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Closed-Closed,winter,low,hf2,3,659,5.109707720799276,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Closed-Closed,winter,low,pc900,0,660,5.109707720799276,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Closed,spring,high,hf2,0,661,5.660939584861929,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Closed,spring,high,pc900,10,662,5.384691187484655,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Closed,spring,low,hf2,6,663,5.9371879822392035,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Closed,spring,low,pc900,0,664,5.660939584861929,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Closed,summer,high,hf2,0,665,5.781870145354373,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Closed,summer,high,pc900,27,666,5.457760851739684,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Closed,summer,low,hf2,9,667,6.105979438969062,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Closed,summer,low,pc900,2,668,5.781870145354373,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Closed,winter,high,hf2,0,669,8.60886491251912,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Closed,winter,high,pc900,82,670,7.313508133123908,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Closed,winter,low,hf2,6,671,9.904221691914332,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Closed,winter,low,pc900,0,672,8.60886491251912,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,spring,high,hf2,0,673,7.183274154484825,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,spring,high,pc900,16,674,6.348976409681056,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Open,spring,low,hf2,8,675,8.017571899288594,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Open,spring,low,pc900,0,676,7.183274154484825,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,summer,high,hf2,0,677,6.583739654266853,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,summer,high,pc900,78,678,6.583739654266853,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Open,summer,low,hf2,2,679,6.583739654266853,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,summer,low,pc900,0,680,6.583739654266853,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,winter,high,hf2,0,681,11.583228957273334,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,winter,high,pc900,51,682,11.583228957273334,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Forested_Open-Open,winter,low,hf2,2,683,11.583228957273334,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Forested_Open-Open,winter,low,pc900,0,684,11.583228957273334,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Open_Open,spring,high,hf2,0,685,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Open_Open,spring,high,pc900,0,686,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Open_Open,spring,low,hf2,0,687,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Open_Open,spring,low,pc900,0,688,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Open_Open,summer,high,hf2,0,689,14.981211541981917,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Open_Open,summer,high,pc900,38,690,14.981211541981917,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Open_Open,summer,low,hf2,0,691,14.981211541981917,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Open_Open,summer,low,pc900,0,692,14.981211541981917,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Open_Open,winter,high,hf2,0,693,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Open_Open,winter,high,pc900,16,694,15,FALSE,TRUE,FALSE,FALSE,capped
+Wolf,Open_Open,winter,low,hf2,0,695,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Open_Open,winter,low,pc900,0,696,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Shrubby_Closed,spring,high,hf2,0,697,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Closed,spring,high,pc900,0,698,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Closed,spring,low,hf2,0,699,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Closed,spring,low,pc900,0,700,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Closed,summer,high,hf2,0,701,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Closed,summer,high,pc900,20,702,5.084959171390711,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Shrubby_Closed,summer,low,hf2,0,703,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Closed,summer,low,pc900,0,704,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Closed,winter,high,hf2,0,705,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Closed,winter,high,pc900,0,706,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Closed,winter,low,hf2,0,707,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Closed,winter,low,pc900,0,708,5.084959171390711,FALSE,TRUE,FALSE,TRUE,filled_within_overall_category
+Wolf,Shrubby_Open,spring,high,hf2,0,709,8.254028713059627,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Open,spring,high,pc900,29,710,8.254028713059627,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Shrubby_Open,spring,low,hf2,0,711,8.254028713059627,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Open,spring,low,pc900,0,712,8.254028713059627,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Open,summer,high,hf2,0,713,8.756836148203497,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Open,summer,high,pc900,17,714,8.756836148203497,FALSE,TRUE,FALSE,FALSE,NA
+Wolf,Shrubby_Open,summer,low,hf2,0,715,8.756836148203497,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Open,summer,low,pc900,3,716,8.756836148203497,FALSE,TRUE,FALSE,TRUE,filled_within overall_category_season
+Wolf,Shrubby_Open,winter,high,hf2,0,717,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Shrubby_Open,winter,high,pc900,39,718,15,FALSE,TRUE,FALSE,FALSE,capped
+Wolf,Shrubby_Open,winter,low,hf2,0,719,15,FALSE,TRUE,FALSE,TRUE,capped
+Wolf,Shrubby_Open,winter,low,pc900,0,720,15,FALSE,TRUE,FALSE,TRUE,capped

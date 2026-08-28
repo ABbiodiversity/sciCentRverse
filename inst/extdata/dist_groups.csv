@@ -1,19 +1,37 @@
 species_common_name,dist_group
-White-tailed Deer,Deer
-Coyote,Coyote
-Moose,LargeUngulates
 Black Bear,Bear
-Mule Deer,Deer
-Deer,Deer
-Snowshoe Hare,Hare
-Elk (wapiti),LargeUngulates
-Gray Wolf,Wolf
-Canada Lynx,Lynx
-Marten,SmallMustelids
-Fisher,SmallMustelids
 Grizzly Bear,Bear
+Moose,LargeUngulates
+Elk (Wapiti),LargeUngulates
 Woodland Caribou,LargeUngulates
-Feral Horse,LargeUngulates
+Bison,LargeUngulates
 Horse,LargeUngulates
 Domestic Horse,LargeUngulates
-Bison,LargeUngulates
+Feral Horse,LargeUngulates
+Bighorn Sheep,LargeUngulates
+Mountain Goat,LargeUngulates
+White-Tailed Deer,Deer
+Mule Deer,Deer
+Deer,Deer
+Pronghorn,Deer
+Snowshoe Hare,Hare
+White-Tailed Jack Rabbit,Hare
+Gray Wolf,Wolf
+Coyote,Coyote
+Red Fox,RedFox
+Canada Lynx,Lynx
+Cougar,Lynx
+Marten,SmallCarnivores
+Fisher,SmallCarnivores
+Mink,SmallCarnivores
+Weasels And Ermine,SmallCarnivores
+Striped Skunk,SmallCarnivores
+Raccoon,SmallCarnivores
+Wolverine,SmallCarnivores
+Badger,SmallCarnivores
+Red Squirrel,Squirrels
+Richardson's Ground Squirrel,Squirrels
+Columbian Ground Squirrel,Squirrels
+Groundhog,Squirrels
+Hoary Marmot,Squirrels
+Porcupine,Squirrels

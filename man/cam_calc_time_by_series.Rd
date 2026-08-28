@@ -8,12 +8,11 @@ cam_calc_time_by_series(
   cons_main_report,
   split_gap_secs = 120,
   tbp_lookup = NULL,
-  n_gap_df = NULL,
   adjust_gap_prob = TRUE
 )
 }
 \arguments{
-\item{cons_main_report}{Data frame (after cam_consolidate_tags()) with at least:
+\item{cons_main_report}{Data frame (after \code{\link[=cam_consolidate_tags]{cam_consolidate_tags()}}) with at least:
 project, location, image_id, image_date_time (POSIXct),
 species_common_name, individual_count}
 
@@ -23,13 +22,6 @@ species_common_name, individual_count}
 Columns required: \code{species_common_name}, \code{tbp}. If \code{NULL}, the function will
 try to use the internal package object \code{tbi} (from R/sysdata.rda). If that is
 not available, it falls back to tbp = 6 seconds for all species and warns.}
-
-\item{n_gap_df}{Optional output of \code{\link[=cam_obtain_n_gap_class]{cam_obtain_n_gap_class()}}. When supplied,
-any image flagged as an N-gap boundary (animal image immediately followed by a
-NONE block before the next same-species image) forces a new series to start on
-the image \emph{after} it, regardless of the time gap. This prevents a NONE-bridged
-pair from being counted as a single continuous series. Matched on
-\code{image_id} × \code{species_common_name}.}
 
 \item{adjust_gap_prob}{Logical. If \code{TRUE} (default), applies a species-specific
 probability-of-leaving-FOV correction to within-series gaps of 20–120 s, using
@@ -65,6 +57,10 @@ any with \code{individual_count == "VNA"}.
 \code{image_date_time} (then \code{image_id}) and the previous-gap (seconds) is computed.
 \item A new series starts at the first image or when the gap exceeds \code{split_gap_secs}
 (default 120 s). \code{series_num} is the cumulative count of such starts.
+\item \code{\link[=cam_obtain_n_gap_class]{cam_obtain_n_gap_class()}} is called internally to detect NONE-bridged gaps —
+cases where an animal image is separated from the next same-species image by one
+or more \code{NONE} rows. These boundaries also force a new series regardless of the
+time gap, preventing a NONE-bridged pair from inflating a single series duration.
 }
 
 \strong{Per-image time allocation}
@@ -117,12 +113,8 @@ seconds is used as a fallback.
 \dontrun{
 # cons_report is the output of cam_consolidate_tags()
 
-# Standard usage — probabilistic gap adjustment applied by default
+# Standard usage — N-gap detection and probabilistic gap adjustment applied automatically
 series <- cam_calc_time_by_series(cons_report)
-
-# With N-gap boundaries to split NONE-bridged series
-n_gaps <- cam_obtain_n_gap_class(cons_report)
-series <- cam_calc_time_by_series(cons_report, n_gap_df = n_gaps)
 
 # Disable probabilistic adjustment to compare results under both assumptions
 series_unadj <- cam_calc_time_by_series(cons_report, adjust_gap_prob = FALSE)

@@ -21,15 +21,15 @@ Assign season labels to a vector of Julian days
 }
 \details{
 Classification is \strong{left-closed}: a day equal to a cutoff is assigned to
-that season (e.g., Julian day 143 is the \emph{first} day of summer when
-\code{cuts = c(99, 143, 288)}). Days that fall before the first cutoff wrap
+that season (e.g., Julian day 125 is the \emph{first} day of summer when
+\code{cuts = c(105, 125, 300)}). Days that fall before the first cutoff wrap
 to the \strong{last} season, allowing year-crossing seasons (e.g., winter spanning
 late-year to early-year).
 }
 \examples{
-cuts <- c(99L, 143L, 288L)
+cuts <- c(105L, 125L, 300L)
 labs <- c("spring", "summer", "winter")
-sciCentRverse:::.assign_season(c(98, 99, 142, 143, 287, 288, 365), cuts, labs)
+sciCentRverse:::.assign_season(c(104, 105, 124, 125, 299, 300, 365), cuts, labs)
 
 }
 \keyword{internal}
