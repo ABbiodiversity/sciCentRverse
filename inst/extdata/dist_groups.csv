@@ -2,7 +2,7 @@ species_common_name,dist_group
 Black Bear,Bear
 Grizzly Bear,Bear
 Moose,LargeUngulates
-Elk (Wapiti),LargeUngulates
+Elk (wapiti),LargeUngulates
 Woodland Caribou,LargeUngulates
 Bison,LargeUngulates
 Horse,LargeUngulates
@@ -10,12 +10,12 @@ Domestic Horse,LargeUngulates
 Feral Horse,LargeUngulates
 Bighorn Sheep,LargeUngulates
 Mountain Goat,LargeUngulates
-White-Tailed Deer,Deer
+White-tailed Deer,Deer
 Mule Deer,Deer
 Deer,Deer
 Pronghorn,Deer
 Snowshoe Hare,Hare
-White-Tailed Jack Rabbit,Hare
+White-tailed Jack Rabbit,Hare
 Gray Wolf,Wolf
 Coyote,Coyote
 Red Fox,RedFox
@@ -24,7 +24,7 @@ Cougar,Lynx
 Marten,SmallCarnivores
 Fisher,SmallCarnivores
 Mink,SmallCarnivores
-Weasels And Ermine,SmallCarnivores
+Weasels and Ermine,SmallCarnivores
 Striped Skunk,SmallCarnivores
 Raccoon,SmallCarnivores
 Wolverine,SmallCarnivores
