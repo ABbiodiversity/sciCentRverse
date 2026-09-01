@@ -135,7 +135,7 @@ cam_summarise_op_by_season <- function(
     dplyr::group_by(dplyr::across(dplyr::all_of(group_keys)), .season) |>
     dplyr::summarise(operating_days = sum(.op %in% TRUE, na.rm = TRUE), .groups = "drop_last") |>
     dplyr::group_by(dplyr::across(dplyr::all_of(group_keys))) |>
-    tidyr::complete(.season = factor(s_labels, levels = s_labels),
+    tidyr::complete(.season = factor(s_labels, levels = s_labels, ordered = TRUE),
                     fill = list(operating_days = 0L)) |>
     dplyr::ungroup()
 
