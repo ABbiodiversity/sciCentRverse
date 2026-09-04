@@ -68,6 +68,7 @@ The package includes the following utility functions:
 - `cam_sum_total_time()` - Summarise total time by project, location, species, and season (with op-days)
 - `cam_extract_model_lookup()` - Extract camera models from an image report
 - `cam_calc_density_by_loc()` - Calculate density at each location from seasonal time and EDD
+- `cam_summarise_density()` - Average density across a unit or region of interest and obtain uncertainty using Monte Carlo simulation
 
 ## Usage
 
